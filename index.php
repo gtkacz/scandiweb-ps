@@ -10,8 +10,8 @@
 	?>
 <body>
     <div class="container">
-        <div style="display: flex; justify-content: space-between; margin-top: 100 px; align-items:center;">
-            <h2>Product list</h2>
+        <div class="title">
+            <h2>Product List</h2>
             <div>
 				<button type="button" class="btn btn-success" id="add-product-btn" onclick="window.location.href='addproduct.php'">Add</button>
 				<button type="button" class="btn btn-danger" id="delete-product-btn">Mass Delete</button>
@@ -32,6 +32,7 @@
 				</div>
 			<?php endwhile; ?>
         </div>
-    </div>
+		<?php include ("partials/footer.php"); ?>
+	</div>
 </body>
 </html>
