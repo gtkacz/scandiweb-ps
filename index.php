@@ -13,7 +13,7 @@
         <div class="title">
             <h2>Product List</h2>
             <div>
-				<button type="button" class="btn btn-success" onclick="window.location.href='addproduct.php'">Add</button>
+				<button type="button" class="btn btn-success" onclick="window.location.href='add-product.php'">Add</button>
 				<button type="submit" class="btn btn-danger" value="delete" name="but_delete">Mass Delete</button>
             </div>
         </div>
@@ -22,7 +22,7 @@
 
         <div class="row isotope-grid">
 			<?php while($row = $rows->fetch_assoc()): ?>
-				<div class="card">
+				<div class="card hover-overlay hover-zoom hover-shadow ripple">
 					<input type="checkbox" class="delete-checkbox" name="delete[]" value="<?= $row["SKU"] ?>">
 					<span><?php echo $row["SKU"]; ?></span>
 					<span><?php echo $row["NAME"]; ?></span>
@@ -31,6 +31,7 @@
 				</div>
 			<?php endwhile; ?>
         </div>
+		</form>
 		<?php include ("partials/footer.php"); ?>
 	</div>
 </body>
