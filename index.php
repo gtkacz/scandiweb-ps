@@ -13,11 +13,13 @@
         <div style="display: flex; justify-content: space-between; margin-top: 100 px; align-items:center;">
             <h2>Product list</h2>
             <div>
-            <button type="button" class="btn btn-success">Add</button>
-            <button type="button" class="btn btn-danger">Mass Delete</button>
+				<button type="button" class="btn btn-success" id="add-product-btn" onclick="window.location.href='addproduct.php'">Add</button>
+				<button type="button" class="btn btn-danger" id="delete-product-btn">Mass Delete</button>
+</script>
             </div>
         </div>
         
+		<hr>
 
         <div class="row isotope-grid">
 			<?php while($row = $rows->fetch_assoc()): ?>
