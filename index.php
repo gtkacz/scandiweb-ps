@@ -6,15 +6,14 @@
 
 	$sql = "select * from products";
 	$rows = $db->query($sql);
-
 	?>
 <body>
     <div class="container">
         <div class="title">
             <h2>Product List</h2>
             <div>
-				<button type="button" class="btn btn-success" id="add-product-btn" onclick="window.location.href='addproduct.php'">Add</button>
-				<button type="button" class="btn btn-danger" id="delete-product-btn">Mass Delete</button>
+				<button type="button" class="btn btn-success" onclick="window.location.href='addproduct.php'">Add</button>
+				<button type="button" class="btn btn-danger">Mass Delete</button>
 </script>
             </div>
         </div>
