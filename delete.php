@@ -7,7 +7,7 @@ if(isset($_POST['but_delete'])){
       $sql = "delete from products where SKU = '$deleteid'";
       mysqli_query($db, $sql);
     }
-    header('location: index.php');
   }
 }
+header('location: index.php');
 ?>

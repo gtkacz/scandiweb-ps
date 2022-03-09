@@ -13,8 +13,8 @@
         <div class="title">
             <h2>Product List</h2>
             <div>
-				<button type="button" class="btn btn-success" onclick="window.location.href='add-product.php'">Add</button>
-				<button type="submit" class="btn btn-danger" value="delete" name="but_delete">Mass Delete</button>
+				<button type="button" class="btn btn-success btn-size" onclick="window.location.href='add-product.php'">Add</button>
+				<button type="submit" class="btn btn-danger btn-size" value="delete" name="but_delete" id="delete-product-btn">Mass Delete</button>
             </div>
         </div>
         

@@ -10,12 +10,12 @@
 	?>
 <body>
     <div class="container">
-    <form method="post" action="add.php">
+    <form method="post" action="add.php" autocomplete="off">
         <div class="title">
             <h2>Product Add</h2>
             <div>
-            <button type="submit" class="btn btn-success">Save</button>
-            <button type="button" class="btn btn-danger" onclick="history.go(-1);">Cancel</button>
+            <button type="submit" class="btn btn-success btn-size">Save</button>
+            <button type="button" class="btn btn-danger btn-size" onclick="history.go(-1);">Cancel</button>
             </div>
         </div>
         

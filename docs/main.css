@@ -1,3 +1,8 @@
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
 .card{
     display: flex;
     flex-direction: column;
@@ -12,6 +17,21 @@
     margin-left: 0.25rem;
     position: relative;
     border: 0.25ch solid black;
+    transition: transform 150ms ease-in-out;
+    -webkit-transition: transform 150ms ease-in-out;
+    -moz-transition: transform 150ms ease-in-out;
+    -ms-transition: transform 150ms ease-in-out;
+    -o-transition: transform 150ms ease-in-out;
+}
+
+.card:hover{
+    border: 0.25ch solid red;
+    filter: drop-shadow(0 1px 5px rgba(0, 0, 0, 0.35));
+    transform: scale(103%);
+    -webkit-transform: scale(103%);
+    -moz-transform: scale(103%);
+    -ms-transform: scale(103%);
+    -o-transform: scale(103%);
 }
 
 .delete-checkbox{
@@ -40,4 +60,8 @@
     width: 20%;
     height: auto;
     padding: 1ch;
+}
+
+.btn-size{
+    width: 13ch;
 }
