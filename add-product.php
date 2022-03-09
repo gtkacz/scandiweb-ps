@@ -21,25 +21,46 @@
         
 		<hr>
 
-        
-            <label for="SKU">SKU</label>
-            <input type="text" id="fsku" name="SKU"><br>
+        <div class="form">
+            <div>
+                <label for="SKU">SKU</label>
+                <input type="text" id="fsku" name="SKU"><br>
+            </div>
 
-            <label for="Name">Name</label>
-            <input type="text" id="fname" name="Name"><br>
+            <div>
+                <label for="Name">Name</label>
+                <input type="text" id="fname" name="Name"><br>
+            </div>
 
-            <label for="Price">Price</label>
-            <input type="text" id="fprice" name="Price"><br>
+            <div>
+                <label for="Price">Price</label>
+                <input type="text" id="fprice" name="Price"><br>
+            </div>
 
-            <label for="attr_name">Type Switcher</label>
-            <select id="attr_name" name="attr_name">
-                <option value="DVD">DVD</option>
-                <option value="Furniture">Furniture</option>
-                <option value="Book">Book</option>
-            </select><br>
+            <div>
+                <label for="attr_name">Type Switcher</label>
+                <select id="attr_name" name="attr_name" class="div-toggle" data-target=".my-info-1">
+                    <option value="DVD" data-show=".one">DVD</option>
+                    <option value="Furniture" data-show=".one">Furniture</option>
+                    <option value="Book" data-show=".three">Book</option>
+                </select><br>
+            </div>
 
-            <label for="attr_value">Attribute Value</label>
-            <input type="text" id="fattr_value" name="attr_value"><br>
+            <div class="my-info-1">
+                <label for="attr_value" class="one hide">Attribute Value</label>
+                <input type="text" id="fattr_value" name="attr_value" class="one hide"><br>
+            </div>
+
+            <div class="my-info-1">
+                <label for="attr_value" class="three hide">Attribute Value</label>
+                <input type="text" id="fattr_value" name="attr_value" class="three hide"><br>
+            </div>
+
+            <div class="my-info-1">
+                <label for="attr_value" class="three hide">Attribute Value</label>
+                <input type="text" id="fattr_value" name="attr_value" class="three hide"><br>
+            </div>
+        </div>
         </form>
         <?php include ("partials/footer.php"); ?>
     </div>
