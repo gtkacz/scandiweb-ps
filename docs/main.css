@@ -1,6 +1,6 @@
 html,
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .card{
@@ -44,22 +44,32 @@ body {
 .title{
     display: flex;
     justify-content: space-between;
+    justify-items: center;
     align-items: center;
+    align-content: center;
     margin: 2ch;
 }
 
 .hide{
     display: none;
+    margin: 0 !important;
 }
 
 .form{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 20%;
     height: auto;
     padding: 1ch;
+    justify-self: center;
+}
+
+.form-item{
+    display: flex;
+    flex-direction: column;
+    margin: 1ch;
 }
 
 .btn-size{
