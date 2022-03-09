@@ -39,26 +39,34 @@
 
             <div>
                 <label for="attr_name">Type Switcher</label>
-                <select id="attr_name" name="attr_name" class="div-toggle" data-target=".my-info-1">
-                    <option value="DVD" data-show=".one">DVD</option>
-                    <option value="Furniture" data-show=".one">Furniture</option>
-                    <option value="Book" data-show=".three">Book</option>
+                <select id="attr_name" name="attr_name" class="div-toggle" data-target=".dynamic-show">
+                    <option value="DVD" data-show=".dvd">DVD</option>
+                    <option value="Furniture" data-show=".furniture">Furniture</option>
+                    <option value="Book" data-show=".book">Book</option>
                 </select><br>
             </div>
 
-            <div class="my-info-1">
-                <label for="attr_value" class="one hide">Attribute Value</label>
-                <input type="text" id="fattr_value" name="attr_value" class="one hide"><br>
+            <div class="dynamic-show">
+                <label for="attr_value" class="dvd hide">Size (MB)</label>
+                <input type="text" id="fattr_value" name="attr_value" class="dvd hide"><br>
             </div>
 
-            <div class="my-info-1">
-                <label for="attr_value" class="three hide">Attribute Value</label>
-                <input type="text" id="fattr_value" name="attr_value" class="three hide"><br>
+            <div class="dynamic-show">
+                <label for="attr_value" class="book hide">Weight (KG)</label>
+                <input type="text" id="fattr_value" name="attr_value" class="book hide"><br>
             </div>
 
-            <div class="my-info-1">
-                <label for="attr_value" class="three hide">Attribute Value</label>
-                <input type="text" id="fattr_value" name="attr_value" class="three hide"><br>
+            <div class="dynamic-show">
+                <label for="attr_value" class="furniture hide">Height (CM)</label>
+                <input type="text" id="fattr_value" name="attr_value" class="furniture hide"><br>
+            </div>
+            <div class="dynamic-show">
+                <label for="attr_value" class="furniture hide">Width (CM)</label>
+                <input type="text" id="fattr_value" name="attr_value" class="furniture hide"><br>
+            </div>
+            <div class="dynamic-show">
+                <label for="attr_value" class="furniture hide">Length (CM)</label>
+                <input type="text" id="fattr_value" name="attr_value" class="furniture hide"><br>
             </div>
         </div>
         </form>
