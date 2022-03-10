@@ -4,7 +4,7 @@
 	include ("partials/head.php");
 	include ("db.php");
 
-	$sql = "select * from products";
+	$sql = "SELECT * FROM `products` ORDER BY `SKU` ASC";
 	$rows = $db->query($sql);
 	?>
 <body>
@@ -13,8 +13,8 @@
         <div class="title">
             <h2>Product List</h2>
             <div>
-				<button type="button" class="btn btn-success btn-size" onclick="window.location.href='add-product.php'">Add</button>
-				<button type="submit" class="btn btn-danger btn-size" value="delete" name="but_delete" id="delete-product-btn">Mass Delete</button>
+				<button type="button" class="btn btn-success btn-size" onclick="window.location.href='add-product.php'">ADD</button>
+				<button type="submit" class="btn btn-danger btn-size" value="delete" name="but_delete" id="delete-product-btn">MASS DELETE</button>
             </div>
         </div>
         
