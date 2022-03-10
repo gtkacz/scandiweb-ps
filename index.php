@@ -4,6 +4,8 @@
 	include ("partials/head.php");
 	include ("db.php");
 
+	$db = new Database();
+
 	$sql = "SELECT * FROM `products` ORDER BY `SKU` ASC";
 	$rows = $db->query($sql);
 	?>
@@ -23,7 +25,7 @@
         <div class="row isotope-grid">
 			<?php while($row = $rows->fetch_assoc()): ?>
 				<div class="card hover-overlay hover-zoom hover-shadow ripple">
-					<input type="checkbox" class="delete-checkbox" name="delete[]" value="<?= $row["SKU"] ?>">
+					<input type="checkbox" class="delete-checkbox" name="delete[]" value="<?= $row["SKU"] ?>" id="delete-checkbox">
 					<span><?php echo $row["SKU"]; ?></span>
 					<span><?php echo $row["NAME"]; ?></span>
 					<span><?php echo "{$row["PRICE"]} $"; ?></span>

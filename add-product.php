@@ -3,10 +3,6 @@
 <?php
 	include ("partials/head.php");
 	include ("db.php");
-
-	$sql = "select * from products";
-	$rows = $db->query($sql);
-
 	?>
 <body>
     <div class="container">

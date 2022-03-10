@@ -1,6 +1,10 @@
 <?php
 include "db.php";
 
+$db = new Database();
+
+$table = "products";
+
 $SKU = $_POST["SKU"];
 $Name = $_POST["Name"];
 $Price = $_POST["Price"];
@@ -20,9 +24,15 @@ elseif($productType == "Furniture"){
     $attr_value = "${height}x${width}x${length}";
 }
 
-$sql = "INSERT INTO products VALUES ('$SKU', '$Name','$Price','$productType','$attr_value')";
+$fields = array(
+    "SKU" => $SKU,
+    "Name" => $Name,
+    "Price" => $Price,
+    "productType" => $productType,
+    "attr_value" => $attr_value
+);
 
-$query = $db->query($sql);
+$query = $db->save($table, $fields);
 
 if($query){
     header('location: index.php');
