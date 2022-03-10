@@ -26,7 +26,7 @@
 					<input type="checkbox" class="delete-checkbox" name="delete[]" value="<?= $row["SKU"] ?>">
 					<span><?php echo $row["SKU"]; ?></span>
 					<span><?php echo $row["NAME"]; ?></span>
-					<span><?php echo $row["PRICE"]; ?></span>
+					<span><?php echo "{$row["PRICE"]} $"; ?></span>
 					<span><?php echo $row["ATTR_VALUE"]; ?></span>
 				</div>
 			<?php endwhile; ?>

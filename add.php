@@ -3,7 +3,7 @@ include "db.php";
 
 $SKU = $_POST["SKU"];
 $Name = $_POST["Name"];
-$Price = $_POST["SKU"];
+$Price = $_POST["Price"];
 $productType = $_POST["productType"];
 
 if($productType == "DVD"){
