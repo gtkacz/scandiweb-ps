@@ -41,5 +41,17 @@ class Database{
             return false;
         }
     }
+
+    public function view($table){
+        $select = "SELECT * FROM ".$table." ORDER BY `SKU` ASC";
+        $answer = $this->db->query($select);
+
+        $list = array();
+
+        while($data = $answer->fetch_array()){
+            $list[] = $data;
+        }
+        return $list;
+    }
 }
 ?>

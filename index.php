@@ -5,9 +5,6 @@
 	include ("db.php");
 
 	$db = new Database();
-
-	$sql = "SELECT * FROM `products` ORDER BY `SKU` ASC";
-	$rows = $db->query($sql);
 	?>
 <body>
     <div class="container">
@@ -23,15 +20,17 @@
 		<hr>
 
         <div class="row isotope-grid">
-			<?php while($row = $rows->fetch_assoc()): ?>
+			<?php
+			$list = $db->view("products");
+			foreach($list as $key => $row){ ?>
 				<div class="card hover-overlay hover-zoom hover-shadow ripple">
-					<input type="checkbox" class="delete-checkbox" name="delete[]" value="<?= $row["SKU"] ?>" id="delete-checkbox">
+					<input type="checkbox" class="delete-checkbox" name="delete[]" row="<?= $row["SKU"] ?>" id="delete-checkbox">
 					<span><?php echo $row["SKU"]; ?></span>
 					<span><?php echo $row["NAME"]; ?></span>
 					<span><?php echo "{$row["PRICE"]} $"; ?></span>
 					<span><?php echo $row["ATTR_VALUE"]; ?></span>
 				</div>
-			<?php endwhile; ?>
+			<?php } ?>
         </div>
 		</form>
 		<?php include ("partials/footer.php"); ?>
