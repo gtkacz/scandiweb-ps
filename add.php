@@ -17,16 +17,15 @@ elseif($productType == "Furniture"){
     $width = $_POST["width"];
     $length = $_POST["length"];
 
-    $attr_value = "$height x$width x$length";
-    echo($attr_value);
+    $attr_value = "${height}x${width}x${length}";
 }
 
 $sql = "INSERT INTO products VALUES ('$SKU', '$Name','$Price','$productType','$attr_value')";
 
 $query = $db->query($sql);
 
-// if($query){
-//     header('location: index.php');
-// }
+if($query){
+    header('location: index.php');
+}
 
 ?>
