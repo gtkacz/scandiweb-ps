@@ -15,7 +15,7 @@
             <h2>Product Add</h2>
             <div>
             <button type="submit" class="btn btn-success btn-size">Save</button>
-            <button type="button" class="btn btn-danger btn-size" onclick="history.go(-1);">Cancel</button>
+            <button type="button" class="btn btn-danger btn-size" onclick="window.location.href='index.php'">Cancel</button>
             </div>
         </div>
         
@@ -24,17 +24,17 @@
         <div class="form">
             <div class="form-item">
                 <label for="SKU">SKU</label>
-                <input type="text" id="sku" name="SKU"><br>
+                <input type="text" id="sku" name="SKU" placeholder="Enter product SKU" oninvalid="this.setCustomValidity('Please, submit required data')" oninput="this.setCustomValidity('')" required><br>
             </div>
 
             <div class="form-item">
                 <label for="Name">Name</label>
-                <input type="text" id="name" name="Name"><br>
+                <input type="text" id="name" name="Name" placeholder="Enter product name" oninvalid="this.setCustomValidity('Please, submit required data')" oninput="this.setCustomValidity('')" required><br>
             </div>
 
             <div class="form-item">
                 <label for="Price">Price</label>
-                <input type="text" id="price" name="Price"><br>
+                <input type="number" step="any" id="price" name="Price" placeholder="Enter product price" oninvalid="this.setCustomValidity('Please, submit required data')" oninput="this.setCustomValidity('')" required><br>
             </div>
 
             <div class="form-item">
@@ -48,27 +48,27 @@
 
             <div class="dynamic-show form-item">
                 <label for="size" class="dvd hide">Size (MB)</label>
-                <input type="text" id="size" name="size" class="dvd hide">
+                <input type="number" id="size" name="size" class="dvd hide" placeholder="Enter size" required>
                 <span class="description dvd hide">* Please provide the size of the contents of the CD in megabytes.</span><br>
             </div>
 
             <div class="dynamic-show form-item">
                 <label for="weight" class="book hide">Weight (KG)</label>
-                <input type="text" id="weight" name="weight" class="book hide">
+                <input type="number" id="weight" name="weight" class="book hide" placeholder="Enter weight" required>
                 <span class="description book hide">* Please provide the weight of the book in kilograms.</span><br>
             </div>
 
             <div class="dynamic-show form-item">
                 <label for="height" class="furniture hide">Height (CM)</label>
-                <input type="text" id="height" name="height" class="furniture hide">
+                <input type="number" id="height" name="height" class="furniture hide" placeholder="Enter height" required>
             </div>
             <div class="dynamic-show form-item">
                 <label for="width" class="furniture hide">Width (CM)</label>
-                <input type="text" id="width" name="width" class="furniture hide">
+                <input type="number" id="width" name="width" class="furniture hide" placeholder="Enter width" required>
             </div>
             <div class="dynamic-show form-item">
                 <label for="length" class="furniture hide">Length (CM)</label>
-                <input type="text" id="length" name="length" class="furniture hide">
+                <input type="number" id="length" name="length" class="furniture hide" placeholder="Enter length" required>
                 <span class="description furniture hide">* Please provide the dimensions of the piece of furniture in centimeters.</span><br>
             </div>
         </div>
