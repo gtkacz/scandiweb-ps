@@ -1,6 +1,6 @@
 html,
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .card{
@@ -74,4 +74,9 @@ body {
 
 .btn-size{
     width: 13ch;
+}
+
+.description{
+    font-size: 10%;
+    size: 10%;
 }

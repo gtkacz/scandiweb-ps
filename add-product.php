@@ -10,7 +10,7 @@
 	?>
 <body>
     <div class="container">
-    <form method="post" action="add.php" autocomplete="off">
+    <form method="post" action="add.php" autocomplete="off" id="product_form">
         <div class="title">
             <h2>Product Add</h2>
             <div>
@@ -24,22 +24,22 @@
         <div class="form">
             <div class="form-item">
                 <label for="SKU">SKU</label>
-                <input type="text" id="fsku" name="SKU"><br>
+                <input type="text" id="sku" name="SKU"><br>
             </div>
 
             <div class="form-item">
                 <label for="Name">Name</label>
-                <input type="text" id="fname" name="Name"><br>
+                <input type="text" id="name" name="Name"><br>
             </div>
 
             <div class="form-item">
                 <label for="Price">Price</label>
-                <input type="text" id="fprice" name="Price"><br>
+                <input type="text" id="price" name="Price"><br>
             </div>
 
             <div class="form-item">
-                <label for="attr_name">Type Switcher</label>
-                <select id="attr_name" name="attr_name" class="div-toggle" data-target=".dynamic-show">
+                <label for="productType">Type Switcher</label>
+                <select id="productType" name="productType" class="div-toggle" data-target=".dynamic-show">
                     <option value="DVD" data-show=".dvd">DVD</option>
                     <option value="Furniture" data-show=".furniture">Furniture</option>
                     <option value="Book" data-show=".book">Book</option>
@@ -47,26 +47,29 @@
             </div>
 
             <div class="dynamic-show form-item">
-                <label for="attr_value" class="dvd hide">Size (MB)</label>
-                <input type="text" id="fattr_value" name="attr_value" class="dvd hide"><br>
+                <label for="size" class="dvd hide">Size (MB)</label>
+                <input type="text" id="size" name="size" class="dvd hide">
+                <span class="description dvd hide">* Please provide the size of the contents of the CD in megabytes.</span><br>
             </div>
 
             <div class="dynamic-show form-item">
-                <label for="attr_value" class="book hide">Weight (KG)</label>
-                <input type="text" id="fattr_value" name="attr_value" class="book hide"><br>
+                <label for="weight" class="book hide">Weight (KG)</label>
+                <input type="text" id="weight" name="weight" class="book hide">
+                <span class="description book hide">* Please provide the weight of the book in kilograms.</span><br>
             </div>
 
             <div class="dynamic-show form-item">
-                <label for="attr_value" class="furniture hide">Height (CM)</label>
-                <input type="text" id="fattr_value" name="attr_value" class="furniture hide"><br>
+                <label for="height" class="furniture hide">Height (CM)</label>
+                <input type="text" id="height" name="height" class="furniture hide">
             </div>
             <div class="dynamic-show form-item">
-                <label for="attr_value" class="furniture hide">Width (CM)</label>
-                <input type="text" id="fattr_value" name="attr_value" class="furniture hide"><br>
+                <label for="width" class="furniture hide">Width (CM)</label>
+                <input type="text" id="width" name="width" class="furniture hide">
             </div>
             <div class="dynamic-show form-item">
-                <label for="attr_value" class="furniture hide">Length (CM)</label>
-                <input type="text" id="fattr_value" name="attr_value" class="furniture hide"><br>
+                <label for="length" class="furniture hide">Length (CM)</label>
+                <input type="text" id="length" name="length" class="furniture hide">
+                <span class="description furniture hide">* Please provide the dimensions of the piece of furniture in centimeters.</span><br>
             </div>
         </div>
         </form>

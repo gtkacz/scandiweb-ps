@@ -4,15 +4,29 @@ include "db.php";
 $SKU = $_POST["SKU"];
 $Name = $_POST["Name"];
 $Price = $_POST["SKU"];
-$attr_name = $_POST["attr_name"];
-$attr_value = $_POST["attr_value"];
+$productType = $_POST["productType"];
 
-$sql = "INSERT INTO products VALUES ('$SKU', '$Name','$Price','$attr_name','$attr_value')";
+if($productType == "DVD"){
+    $attr_value = $_POST["size"];
+}
+elseif($productType == "Book"){
+    $attr_value = $_POST["weight"];
+}
+elseif($productType == "Furniture"){
+    $height = $_POST["height"];
+    $width = $_POST["width"];
+    $length = $_POST["length"];
+
+    $attr_value = "$height x$width x$length";
+    echo($attr_value);
+}
+
+$sql = "INSERT INTO products VALUES ('$SKU', '$Name','$Price','$productType','$attr_value')";
 
 $query = $db->query($sql);
 
-if($query){
-    header('location: index.php');
-}
+// if($query){
+//     header('location: index.php');
+// }
 
 ?>
