@@ -86,7 +86,12 @@ body {
     justify-items: center;
     align-items: center;
     align-content: center;
+    vertical-align: middle;
     margin: 2ch;
+}
+
+h2{
+    margin: 0 !important;
 }
 
 .hide{
@@ -117,6 +122,10 @@ body {
 
 .description{
     font-size: 1.5ch;
+}
+
+.form input{
+    max-width: fit-content;
 }
 
 .card-edit{

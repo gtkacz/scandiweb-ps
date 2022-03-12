@@ -20,7 +20,7 @@
     <div class="bg-danger p-4">
       <img src="img/white logo.png" style="padding-bottom: 1ch; height: 5ch; cursor: default">
       <h4 class="text-white">Scandiweb Junior Developer Test Task</h4>
-      <small class="text-white">Made by Gabriel Tkacz</small>
+      <small class="text-white">Made by <a href="https://github.com/gtkacz/scandiweb-ps" target="_blank" title="View source code">Gabriel Tkacz</a></small>
     </div>
   </div>
   <nav class="navbar navbar-dark bg-dark">
