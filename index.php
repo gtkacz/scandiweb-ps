@@ -13,9 +13,9 @@
 						<input type="checkbox" class="delete-checkbox" name="delete[]" row="<?= '.$row->SKU.' ?>" id="delete-checkbox">
 						<input type="image" class="edit-content" src="img/edit_black_24dp.svg" value=""/>
 						<span>'.$row->SKU.'</span>
-						<span>'.$row->Name.'</span>
-						<span>"'.$row->Price.'</span>
-						<span>'.$row->productAttribute.'</span>
+						<span>'.$row->NAME.'</span>
+						<span>'.$row->PRICE.' $</span>
+						<span>'.$row->attributeString().'</span>
 					</div>';
 	}
 	?>
