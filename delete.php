@@ -15,5 +15,5 @@ if(isset($_POST['but_delete'])){
     $delete = $db->delete($table, $where);
   }
 }
-header('location: index.php');
+header('location: index');
 ?>

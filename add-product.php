@@ -6,12 +6,12 @@
 	?>
 <body>
     <div class="container">
-    <form method="post" action="add.php" autocomplete="off" id="product_form">
+    <form method="post" action="add" autocomplete="off" id="product_form">
         <div class="title">
             <h2>Product Add</h2>
             <div>
             <button type="submit" class="btn btn-success btn-size">Save</button>
-            <button type="button" class="btn btn-danger btn-size" onclick="window.location.href='index.php'">Cancel</button>
+            <button type="button" class="btn btn-danger btn-size" onclick="window.location.href='index'">Cancel</button>
             </div>
         </div>
         

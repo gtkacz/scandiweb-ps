@@ -126,6 +126,7 @@ body {
     align-items: center;
     align-content: center;
     justify-items: center;
+    border-radius: 3%;
     width: 30%;
     height: auto;
     padding: 1ch;
@@ -136,6 +137,10 @@ body {
     position: relative;
     border: 0.25ch solid black;
     font-size: 3ch;
+    -webkit-border-radius: 3%;
+    -moz-border-radius: 3%;
+    -ms-border-radius: 3%;
+    -o-border-radius: 3%;
 }
 
 .fake-input{

@@ -108,6 +108,7 @@ abstract class Product{
 
     abstract public static function getProducts($where = null, $order = null);
     abstract public static function getProduct($SKU);
+    abstract public function remove();
     abstract public function attributeString() : string;
 }
 
