@@ -203,3 +203,8 @@ h2{
     -o-transition: transform 150ms ease-in-out;
     border-radius: 2%;
 }
+
+.main-grid{
+    align-items: center;
+    justify-content: center;
+}

@@ -40,7 +40,7 @@
         
 		<hr>
 
-        <div class="row isotope-grid">
+        <div class="row isotope-grid main-grid">
 			<?=$results?>
         </div>
 		</form>
