@@ -89,24 +89,24 @@ abstract class Product{
       $this->productAttribute = $productAttribute;
     }
 
-    abstract public function intro() : string;
+    abstract public function attributeString() : string;
 }
 
 class DVD extends Product{
-    public function intro() : string {
-        return "Choose German quality! I'm an $this->name!";
+    public function attributeString() : string {
+        return "Size: $this->productAttribute MB";
     }
 }
 
 class Book extends Product{
-    public function intro() : string {
-        return "Proud to be Swedish! I'm a $this->name!";
+    public function attributeString() : string {
+        return "Weight: $this->productAttribute KG";
     }
 }
 
 class Furniture extends Product{
-    public function intro() : string {
-        return "French extravagance! I'm a $this->name!";
+    public function attributeString() : string {
+        return "Dimension: $this->productAttribute";
     }
 }
 ?>
