@@ -77,14 +77,6 @@ abstract class Product{
     public $productType;
     public $productAttribute;
 
-    // public function __construct($SKU = null, $Name = null, $Price = null, $productType = null, $productAttribute = null){
-    //   $this->SKU = $SKU;
-    //   $this->Name = $Name;
-    //   $this->Price = $Price;
-    //   $this->productType = $productType;
-    //   $this->productAttribute = $productAttribute;
-    // }
-
     public function create(){
         $db = new Database("products");
         $db->insert([
