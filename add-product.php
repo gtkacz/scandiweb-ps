@@ -52,13 +52,13 @@
 
             <div class="dynamic-show form-item">
                 <label for="size" class="dvd hide">Size (MB)</label>
-                <input type="number" min="0" oninput="validity.valid||(value='');" id="size" name="size" class="dvd hide" placeholder="Enter product size" required>
+                <input type="number" onChange="update('size', 'attrupdate');" min="0" oninput="validity.valid||(value='');" id="size" name="size" class="dvd hide" placeholder="Enter product size" required>
                 <span class="description dvd hide">* Please provide the size of the contents of the CD in megabytes.</span><br>
             </div>
 
             <div class="dynamic-show form-item">
                 <label for="weight" class="book hide">Weight (KG)</label>
-                <input type="number" min="0" oninput="validity.valid||(value='');" id="weight" name="weight" class="book hide" placeholder="Enter product weight" required>
+                <input type="number" onChange="update('weight', 'attrupdate');" min="0" oninput="validity.valid||(value='');" id="weight" name="weight" class="book hide" placeholder="Enter product weight" required>
                 <span class="description book hide">* Please provide the weight of the book in kilograms.</span><br>
             </div>
 
