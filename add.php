@@ -1,37 +1,34 @@
 <?php
 include "db.php";
 
-$db = new Database();
+if(isset($_POST["SKU"], $_POST["Name"], $_POST["Price"], $_POST["productType"])){
+    $productType = $_POST["productType"];
 
-$table = "products";
+    if($productType == "DVD"){
+        $productAttribute = $_POST["size"];
+        $newProduct = new DVD;
+    }
+    elseif($productType == "Book"){
+        $productAttribute = $_POST["weight"];
+        $newProduct = new Book;
+    }
+    elseif($productType == "Furniture"){
+        $height = $_POST["height"];
+        $width = $_POST["width"];
+        $length = $_POST["length"];
+    
+        $productAttribute = "${height}x${width}x${length}";
+        $newProduct = new Furniture;
+    }
 
-$SKU = $_POST["SKU"];
-$Name = $_POST["Name"];
-$Price = $_POST["Price"];
-$productType = $_POST["productType"];
+    $newProduct->SKU = $_POST["SKU"];
+    $newProduct->Name = $_POST["Name"];
+    $newProduct->Price = $_POST["Price"];
+    $newProduct->productType = $productType;
+    $newProduct->productAttribute = $productAttribute;
 
-if($productType == "DVD"){
-    $attr_value = $_POST["size"];
+    $newProduct->create();
 }
-elseif($productType == "Book"){
-    $attr_value = $_POST["weight"];
-}
-elseif($productType == "Furniture"){
-    $height = $_POST["height"];
-    $width = $_POST["width"];
-    $length = $_POST["length"];
-
-    $attr_value = "${height}x${width}x${length}";
-}
-
-$fields = array(
-    "SKU" => $SKU,
-    "Name" => $Name,
-    "Price" => $Price,
-    "productType" => $productType,
-    "attr_value" => $attr_value
-);
-
 $query = $db->save($table, $fields);
 
 if($query){

@@ -101,7 +101,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 20%;
+    width: 100%;
     height: auto;
     padding: 1ch;
     justify-self: center;
@@ -118,6 +118,5 @@ body {
 }
 
 .description{
-    font-size: 10%;
-    size: 10%;
+    font-size: 1.5ch;
 }

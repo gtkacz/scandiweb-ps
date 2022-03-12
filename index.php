@@ -6,6 +6,7 @@
 
 	$db = new Database();
 	?>
+<!-- <body class="bg-dark text-light"> -->
 <body>
     <div class="container">
 	<form method="post" action="delete.php">
