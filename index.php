@@ -25,6 +25,7 @@
 			foreach($list as $key => $row){ ?>
 				<div class="card hover-overlay hover-zoom hover-shadow ripple">
 					<input type="checkbox" class="delete-checkbox" name="delete[]" row="<?= $row["SKU"] ?>" id="delete-checkbox">
+					<input type="image" class="edit-content" src="img/edit_black_24dp.svg" value=""/>
 					<span><?php echo $row["SKU"]; ?></span>
 					<span><?php echo $row["NAME"]; ?></span>
 					<span><?php echo "{$row["PRICE"]} $"; ?></span>

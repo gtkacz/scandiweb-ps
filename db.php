@@ -92,19 +92,19 @@ abstract class Product{
     abstract public function intro() : string;
 }
 
-class Audi extends Product{
+class DVD extends Product{
     public function intro() : string {
         return "Choose German quality! I'm an $this->name!";
     }
 }
 
-class Volvo extends Product{
+class Book extends Product{
     public function intro() : string {
         return "Proud to be Swedish! I'm a $this->name!";
     }
 }
 
-class Citroen extends Product{
+class Furniture extends Product{
     public function intro() : string {
         return "French extravagance! I'm a $this->name!";
     }
