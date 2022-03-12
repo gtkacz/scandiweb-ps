@@ -80,6 +80,7 @@ body {
 
 .card:hover .edit-content:hover{
     opacity: 75%;
+    cursor: pointer;
 }
 
 .title{

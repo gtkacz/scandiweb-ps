@@ -90,13 +90,17 @@ abstract class Product{
     }
 
     abstract public static function getProducts($where = null, $order = null);
-
+    abstract public static function getProduct($SKU);
     abstract public function attributeString() : string;
 }
 
 class DVD extends Product{
     public static function getProducts($where = "productType = 'DVD'", $order = "SKU"){
         return (new Database('products'))->select($where, $order)->fetchAll(PDO::FETCH_CLASS, static::class);
+    }
+
+    public static function getProduct($SKU){
+        return (new Database("products"))->select("SKU = $SKU")->fetchObject(static::class);
     }
 
     public function attributeString() : string {
@@ -109,6 +113,10 @@ class Book extends Product{
         return (new Database('products'))->select($where, $order)->fetchAll(PDO::FETCH_CLASS, static::class);
     }
 
+    public static function getProduct($SKU){
+        return (new Database("products"))->select("SKU = $SKU")->fetchObject(static::class);
+    }
+
     public function attributeString() : string {
         return "Weight: $this->productAttribute KG";
     }
@@ -117,6 +125,10 @@ class Book extends Product{
 class Furniture extends Product{
     public static function getProducts($where = "productType = 'Furniture'", $order = "SKU"){
         return (new Database('products'))->select($where, $order)->fetchAll(PDO::FETCH_CLASS, static::class);
+    }
+
+    public static function getProduct($SKU){
+        return (new Database("products"))->select("SKU = $SKU")->fetchObject(static::class);
     }
 
     public function attributeString() : string {
