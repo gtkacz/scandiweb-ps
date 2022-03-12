@@ -9,11 +9,14 @@
 	$allFurniture = Furniture::getProducts();
 	$allProducts = array_merge($allDVD, $allBook, $allFurniture);
 
+	array_multisort(array_column($allProducts, 'SKU'), SORT_DESC, $allProducts);
+
 	$results = "";
 
 	foreach($allProducts as $row){
 		$results .= '<div class="card hover-overlay hover-zoom hover-shadow ripple">
-						<input type="checkbox" class="delete-checkbox" name="delete[]" row='.$row->SKU.' id="delete-checkbox">
+						<input type="checkbox" class="delete-checkbox" name="delete[]" value='.$row->SKU.' id="delete-checkbox">
+						<input type="hidden" name="deleteType[]" value='.$row->productType.'>
 						<a href="edit-product?SKU='.$row->SKU.'&type='.$row->productType.'">
 							<img alt="Edit listing" src="img/edit_black_24dp.svg" class="edit-content">
                         </a>

@@ -50,7 +50,7 @@ class Database{
         $where = strlen($where) ? 'WHERE '.$where : '';
         $order = strlen($order) ? 'ORDER BY '.$order : '';
 
-        $query = 'SELECT '.$fields.' FROM '.$this->table.' '.$where.' '.$order.'';
+        $query = 'SELECT '.$fields.' FROM '.$this->table.' '.$where.' '.$order.''; 
         
         return $this->execute($query);
     }
@@ -113,7 +113,7 @@ abstract class Product{
 }
 
 class DVD extends Product{
-    public static function getProducts($where = "productType = 'DVD'", $order = "SKU"){
+    public static function getProducts($where = "productType = 'DVD'", $order = "'SKU'"){
         return (new Database('products'))->select($where, $order)->fetchAll(PDO::FETCH_CLASS, static::class);
     }
 
@@ -131,7 +131,7 @@ class DVD extends Product{
 }
 
 class Book extends Product{
-    public static function getProducts($where = "productType = 'Book'", $order = "SKU"){
+    public static function getProducts($where = "productType = 'Book'", $order = "'SKU'"){
         return (new Database('products'))->select($where, $order)->fetchAll(PDO::FETCH_CLASS, static::class);
     }
 
@@ -149,7 +149,7 @@ class Book extends Product{
 }
 
 class Furniture extends Product{
-    public static function getProducts($where = "productType = 'Furniture'", $order = "SKU"){
+    public static function getProducts($where = "productType = 'Furniture'", $order = "'SKU'"){
         return (new Database('products'))->select($where, $order)->fetchAll(PDO::FETCH_CLASS, static::class);
     }
 
