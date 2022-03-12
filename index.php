@@ -4,7 +4,20 @@
 	include ("partials/head.php");
 	include ("db.php");
 
-	$db = new Database();
+	$allTeste = DVD::getProducts();
+
+	$results = "";
+
+	foreach($allTeste as $row){
+		$results .= '<div class="card hover-overlay hover-zoom hover-shadow ripple">
+						<input type="checkbox" class="delete-checkbox" name="delete[]" row="<?= '.$row->SKU.' ?>" id="delete-checkbox">
+						<input type="image" class="edit-content" src="img/edit_black_24dp.svg" value=""/>
+						<span>'.$row->SKU.'</span>
+						<span>'.$row->Name.'</span>
+						<span>"'.$row->Price.'</span>
+						<span>'.$row->productAttribute.'</span>
+					</div>';
+	}
 	?>
 <!-- <body class="bg-dark text-light"> -->
 <body>
@@ -21,18 +34,7 @@
 		<hr>
 
         <div class="row isotope-grid">
-			<?php
-			$list = $db->view("products");
-			foreach($list as $key => $row){ ?>
-				<div class="card hover-overlay hover-zoom hover-shadow ripple">
-					<input type="checkbox" class="delete-checkbox" name="delete[]" row="<?= $row["SKU"] ?>" id="delete-checkbox">
-					<input type="image" class="edit-content" src="img/edit_black_24dp.svg" value=""/>
-					<span><?php echo $row["SKU"]; ?></span>
-					<span><?php echo $row["NAME"]; ?></span>
-					<span><?php echo "{$row["PRICE"]} $"; ?></span>
-					<span><?php echo $row["ATTR_VALUE"]; ?></span>
-				</div>
-			<?php } ?>
+			<?=$results?>
         </div>
 		</form>
 		<?php include ("partials/footer.php"); ?>

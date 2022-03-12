@@ -50,6 +50,15 @@ class Database{
 
         $this->execute($query, array_values($values));
     }
+
+    public function select($where = null, $order = null, $fields = "*"){
+        $where = strlen($where) ? 'WHERE '.$where : '';
+        $order = strlen($order) ? 'ORDER BY '.$order : '';
+
+        $query = 'SELECT '.$fields.' FROM '.$this->table.' '.$where.' '.$order.'';
+
+        return $this->execute($query);
+    }
 }
 
 abstract class Product{
@@ -59,13 +68,13 @@ abstract class Product{
     public $productType;
     public $productAttribute;
 
-    public function __construct($SKU = null, $Name = null, $Price = null, $productType = null, $productAttribute = null){
-      $this->SKU = $SKU;
-      $this->Name = $Name;
-      $this->Price = $Price;
-      $this->productType = $productType;
-      $this->productAttribute = $productAttribute;
-    }
+    // public function __construct($SKU = null, $Name = null, $Price = null, $productType = null, $productAttribute = null){
+    //   $this->SKU = $SKU;
+    //   $this->Name = $Name;
+    //   $this->Price = $Price;
+    //   $this->productType = $productType;
+    //   $this->productAttribute = $productAttribute;
+    // }
 
     public function create(){
         $db = new Database("products");
@@ -80,22 +89,36 @@ abstract class Product{
         return true;
     }
 
+    abstract public static function getProducts($where = null, $order = null);
+
     abstract public function attributeString() : string;
 }
 
 class DVD extends Product{
+    public static function getProducts($where = null, $order = null){
+        return (new Database('products'))->select($where, $order)->fetchAll(PDO::FETCH_CLASS, self::class);
+    }
+
     public function attributeString() : string {
         return "Size: $this->productAttribute MB";
     }
 }
 
 class Book extends Product{
+    public static function getProducts($where = null, $order = null){
+        return (new Database('products'))->select($where, $order)->fetchAll(PDO::FETCH_CLASS, self::class);
+    }
+
     public function attributeString() : string {
         return "Weight: $this->productAttribute KG";
     }
 }
 
 class Furniture extends Product{
+    public static function getProducts($where = null, $order = null){
+        return (new Database('products'))->select($where, $order)->fetchAll(PDO::FETCH_CLASS, self::class);
+    }
+
     public function attributeString() : string {
         return "Dimension: $this->productAttribute";
     }
