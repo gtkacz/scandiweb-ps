@@ -121,3 +121,33 @@ body {
 .description{
     font-size: 1.5ch;
 }
+
+.card-edit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    width: 30%;
+    height: auto;
+    padding: 1ch;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    margin-right: 0.25rem;
+    margin-left: 0.25rem;
+    position: relative;
+    border: 0.25ch solid black;
+    font-size: 3ch;
+}
+
+.fake-input{
+    border: none;
+    display: inline;
+    font-family: inherit;
+    font-size: inherit;
+    padding: none;
+    width: 75%;
+    background: none;
+    text-align: center;
+}
