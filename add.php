@@ -27,12 +27,7 @@ if(isset($_POST["SKU"], $_POST["Name"], $_POST["Price"], $_POST["productType"]))
     $newProduct->productType = $productType;
     $newProduct->productAttribute = $productAttribute;
 
-    $newProduct->create();
+    header('location: index.php?status=success');
+    exit;
 }
-$query = $db->save($table, $fields);
-
-if($query){
-    header('location: index.php');
-}
-
 ?>

@@ -31,6 +31,25 @@ class Database{
             die("ERROR: ".$e->getMessage());
         }
     }
+
+    public function execute($query, $params = []){
+        try{
+          $statement = $this->connection->prepare($query);
+          $statement->execute($params);
+          return $statement;
+        }catch(PDOException $e){
+          die('ERROR: '.$e->getMessage());
+        }
+      }
+
+    public function insert($values){
+        $fields = array_keys($values);
+        $binds  = array_pad([], count($fields), '?');
+
+        $query = 'INSERT INTO '.$this->table.' ('.implode(',',$fields).') VALUES ('.implode(',',$binds).')';
+
+        $this->execute($query, array_values($values));
+    }
 }
 
 abstract class Product{
@@ -40,7 +59,7 @@ abstract class Product{
     public $productType;
     public $productAttribute;
 
-    public function __construct($SKU, $Name, $Price, $productType, $productAttribute){
+    public function __construct($SKU = null, $Name = null, $Price = null, $productType = null, $productAttribute = null){
       $this->SKU = $SKU;
       $this->Name = $Name;
       $this->Price = $Price;
@@ -49,7 +68,16 @@ abstract class Product{
     }
 
     public function create(){
-        ;
+        $db = new Database("products");
+        $db->insert([
+            "SKU" => $this->SKU,
+            "Name" => $this->Name,
+            "Price" => $this->Price,
+            "productType" => $this->productType,
+            "productAttribute" => $this->productAttribute
+        ]);
+
+        return true;
     }
 
     abstract public function attributeString() : string;
