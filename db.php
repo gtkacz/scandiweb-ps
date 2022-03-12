@@ -43,7 +43,7 @@ class Database{
     }
 
     public function view($table){
-        $select = "SELECT * FROM ".$table." ORDER BY `SKU` ASC";
+        $select = "SELECT * FROM {$table} ORDER BY `SKU` ASC";
         $answer = $this->db->query($select);
 
         $list = array();
@@ -52,6 +52,61 @@ class Database{
             $list[] = $data;
         }
         return $list;
+    }
+
+    public function delete($table, $where){
+        $condition = "";
+
+        foreach($where as $key => $value){
+            $condition .= $key. "= '".$value."' AND ";
+        }
+
+        $condition = substr($condition, 0, -5);
+        $delete = "DELETE FROM {$table} WHERE {$condition}";
+
+        $answer = $this->db->query($delete);
+
+        if($answer){
+            return true;
+        } else{
+            return false;
+        }
+    }
+}
+
+abstract class Product{
+    private $SKU;
+    private $Name;
+    private $Price;
+    private $productType;
+    private $productAttribute;
+
+    public function __construct($SKU, $Name, $Price, $productType, $productAttribute){
+      $this->SKU = $SKU;
+      $this->Name = $Name;
+      $this->Price = $Price;
+      $this->productType = $productType;
+      $this->productAttribute = $productAttribute;
+    }
+
+    abstract public function intro() : string;
+}
+
+class Audi extends Product{
+    public function intro() : string {
+        return "Choose German quality! I'm an $this->name!";
+    }
+}
+
+class Volvo extends Product{
+    public function intro() : string {
+        return "Proud to be Swedish! I'm a $this->name!";
+    }
+}
+
+class Citroen extends Product{
+    public function intro() : string {
+        return "French extravagance! I'm a $this->name!";
     }
 }
 ?>

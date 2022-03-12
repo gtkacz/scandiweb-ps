@@ -44,27 +44,27 @@
 
             <div class="dynamic-show form-item">
                 <label for="size" class="dvd hide">Size (MB)</label>
-                <input type="number" id="size" name="size" class="dvd hide" placeholder="Enter size" required>
+                <input type="number" id="size" name="size" class="dvd hide" placeholder="Enter product size" required>
                 <span class="description dvd hide">* Please provide the size of the contents of the CD in megabytes.</span><br>
             </div>
 
             <div class="dynamic-show form-item">
                 <label for="weight" class="book hide">Weight (KG)</label>
-                <input type="number" id="weight" name="weight" class="book hide" placeholder="Enter weight" required>
+                <input type="number" id="weight" name="weight" class="book hide" placeholder="Enter product weight" required>
                 <span class="description book hide">* Please provide the weight of the book in kilograms.</span><br>
             </div>
 
             <div class="dynamic-show form-item">
                 <label for="height" class="furniture hide">Height (CM)</label>
-                <input type="number" id="height" name="height" class="furniture hide" placeholder="Enter height" required>
+                <input type="number" id="height" name="height" class="furniture hide" placeholder="Enter product height" required>
             </div>
             <div class="dynamic-show form-item">
                 <label for="width" class="furniture hide">Width (CM)</label>
-                <input type="number" id="width" name="width" class="furniture hide" placeholder="Enter width" required>
+                <input type="number" id="width" name="width" class="furniture hide" placeholder="Enter product width" required>
             </div>
             <div class="dynamic-show form-item">
                 <label for="length" class="furniture hide">Length (CM)</label>
-                <input type="number" id="length" name="length" class="furniture hide" placeholder="Enter length" required>
+                <input type="number" id="length" name="length" class="furniture hide" placeholder="Enter product length" required>
                 <span class="description furniture hide">* Please provide the dimensions of the piece of furniture in centimeters.</span><br>
             </div>
         </div>
