@@ -14,8 +14,7 @@
 
 	foreach($allProducts as $row){
 		$results .= '<div class="card hover-overlay hover-zoom hover-shadow ripple">
-						<input type="checkbox" class="delete-checkbox" name="delete[]" value='.$row->SKU.' id="delete-checkbox">
-						<input type="hidden" name="deleteType[]" value='.$row->productType.'>
+						<input type="checkbox" class="delete-checkbox" name="delete[]" value='.$row->SKU.'+'.$row->productType.' id="delete-checkbox">
 						<a href="edit-product?SKU='.$row->SKU.'&type='.$row->productType.'">
 							<img alt="Edit listing" src="img/edit_black_24dp.svg" class="edit-content">
                         </a>
