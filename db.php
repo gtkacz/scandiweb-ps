@@ -59,6 +59,15 @@ class Database{
 
         return $this->execute($query);
     }
+
+    public function update($where, $values){
+        $fields = array_keys($values);
+        $query = 'UPDATE '.$this->table.' SET '.implode('=?,', $fields).'=? WHERE '.$where;
+
+        $this->execute($query, array_values($values));
+
+        return true;
+    }
 }
 
 abstract class Product{
@@ -88,6 +97,19 @@ abstract class Product{
 
         return true;
     }
+
+    public function edit($oldSKU){
+        $db = new Database("products");
+        $db->update('SKU = '.$oldSKU, [
+            "SKU" => $this->SKU,
+            "Name" => $this->Name,
+            "Price" => $this->Price,
+            "productType" => $this->productType,
+            "productAttribute" => $this->productAttribute
+        ]);
+
+        return true;
+      }
 
     abstract public static function getProducts($where = null, $order = null);
     abstract public static function getProduct($SKU);
