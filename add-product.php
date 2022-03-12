@@ -16,21 +16,29 @@
         </div>
         
 		<hr>
-        
+        <div class=preview>
+
+        <div class="card-preview">
+            <span id="skuupdate">SKU</span>
+            <span id="nameupdate">Name</span>
+            <span id="priceupdate">Price</span>
+            <span id="attrupdate">Attribute</span>
+        </div>
+
         <div class="form">
             <div class="form-item">
                 <label for="SKU">SKU</label>
-                <input type="text" maxlength="30" id="sku" name="SKU" placeholder="Enter product SKU" oninvalid="this.setCustomValidity('Please, submit required data')" oninput="this.setCustomValidity('')" required><br>
+                <input type="text" onChange="update('sku', 'skuupdate');" maxlength="30" id="sku" name="SKU" placeholder="Enter product SKU" oninvalid="this.setCustomValidity('Please, submit required data')" oninput="this.setCustomValidity('')" required><br>
             </div>
 
             <div class="form-item">
                 <label for="Name">Name</label>
-                <input type="text" maxlength="65" id="name" name="Name" placeholder="Enter product name" oninvalid="this.setCustomValidity('Please, submit required data')" oninput="this.setCustomValidity('')" required><br>
+                <input type="text" onChange="update('name', 'nameupdate');" maxlength="65" id="name" name="Name" placeholder="Enter product name" oninvalid="this.setCustomValidity('Please, submit required data')" oninput="this.setCustomValidity('')" required><br>
             </div>
 
             <div class="form-item">
                 <label for="Price">Price</label>
-                <input type="number" min="0" oninput="validity.valid||(value='');" step="any" id="price" name="Price" placeholder="Enter product price" oninvalid="this.setCustomValidity('Please, submit required data')" oninput="this.setCustomValidity('')" required><br>
+                <input type="number" onChange="update('price', 'priceupdate');" min="0" oninput="validity.valid||(value='');" step="any" id="price" name="Price" placeholder="Enter product price" oninvalid="this.setCustomValidity('Please, submit required data')" oninput="this.setCustomValidity('')" required><br>
             </div>
 
             <div class="form-item">
@@ -68,8 +76,10 @@
                 <span class="description furniture hide">* Please provide the dimensions of the piece of furniture in centimeters.</span><br>
             </div>
         </div>
+        </div>
         </form>
         <?php include ("partials/footer.php"); ?>
+    
     </div>
 </body>
 </html>

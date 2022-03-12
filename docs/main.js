@@ -8,6 +8,13 @@ $(document).on('change', '.div-toggle', function() {
     $(show).prop('required', true);
     $(show).parent().addClass('form-item');
   });
+
   $(document).ready(function(){
       $('.div-toggle').trigger('change');
   });
+
+function update(source, target){
+    var update_text = document.getElementById(source).value;
+    document.getElementById(target).textContent = update_text;
+    document.getElementById(target).style.color = "black";
+}
