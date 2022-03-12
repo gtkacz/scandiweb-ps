@@ -2,7 +2,7 @@
 <html lang="en">
 <?php
 	include ("partials/head.php");
-	include ("db.php");
+	include ("docs/classes.php");
 	?>
 <body>
     <div class="container">

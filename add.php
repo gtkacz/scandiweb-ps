@@ -1,5 +1,5 @@
 <?php
-include "db.php";
+include "docs/classes.php";
 
 if(isset($_POST["SKU"], $_POST["Name"], $_POST["Price"], $_POST["productType"])){
     $productType = $_POST["productType"];
@@ -25,11 +25,11 @@ if(isset($_POST["SKU"], $_POST["Name"], $_POST["Price"], $_POST["productType"]))
             break;
     }
 
-    $newProduct->setSKU($_POST["SKU"]);
-    $newProduct->setName($_POST["Name"]);
-    $newProduct->setPrice($_POST["Price"]);
-    $newProduct->setProductType($productType);
-    $newProduct->setProductAttribute($productAttribute);
+    $newProduct->SKU = $_POST["SKU"];
+    $newProduct->Name = $_POST["Name"];
+    $newProduct->Price = $_POST["Price"];
+    $newProduct->productType = $productType;
+    $newProduct->productAttribute = $productAttribute;
 
     $newProduct->create();
 

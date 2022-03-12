@@ -1,5 +1,5 @@
 <?php
-include ("db.php");
+include ("docs/classes.php");
 
 if(isset($_GET["SKU"], $_GET["type"])){
     $Type = $_GET["type"];

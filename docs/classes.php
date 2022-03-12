@@ -1,10 +1,5 @@
 <!-- <?php
 	// $db = new Mysqli;
-    // $db->connect('localhost', 'root', '', 'product_list');
-?> -->
-
-<!-- <?php
-	// $db = new Mysqli;
     // $db->connect('sql302.epizy.com', 'epiz_31256053', '7dD59QGe4nloyJ', 'epiz_31256053_product_list');
 ?> -->
 
@@ -32,7 +27,7 @@ class Database{
         }
     }
 
-    public function execute($query, $params = []){
+    private function execute($query, $params = []){
         try{
           $statement = $this->connection->prepare($query);
           $statement->execute($params);
@@ -56,7 +51,7 @@ class Database{
         $order = strlen($order) ? 'ORDER BY '.$order : '';
 
         $query = 'SELECT '.$fields.' FROM '.$this->table.' '.$where.' '.$order.'';
-
+        
         return $this->execute($query);
     }
 
@@ -68,6 +63,14 @@ class Database{
 
         return true;
     }
+
+    public function delete($where){
+        $query = 'DELETE FROM '.$this->table.' WHERE '.$where;
+    
+        $this->execute($query);
+    
+        return true;
+      }
 }
 
 abstract class Product{
@@ -117,6 +120,10 @@ class DVD extends Product{
         return (new Database("products"))->select("SKU = $SKU")->fetchObject(static::class);
     }
 
+    public function remove(){
+        return (new Database('products'))->delete('SKU = '.$this->SKU);
+    }
+
     public function attributeString() : string {
         return "Size: $this->productAttribute MB";
     }
@@ -131,6 +138,10 @@ class Book extends Product{
         return (new Database("products"))->select("SKU = $SKU")->fetchObject(static::class);
     }
 
+    public function remove(){
+        return (new Database('products'))->delete('SKU = '.$this->SKU);
+    }
+
     public function attributeString() : string {
         return "Weight: $this->productAttribute KG";
     }
@@ -143,6 +154,10 @@ class Furniture extends Product{
 
     public static function getProduct($SKU){
         return (new Database("products"))->select("SKU = $SKU")->fetchObject(static::class);
+    }
+
+    public function remove(){
+        return (new Database('products'))->delete('SKU = '.$this->SKU);
     }
 
     public function attributeString() : string {

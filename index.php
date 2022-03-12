@@ -2,7 +2,7 @@
 <html lang="en">
 <?php
 	include ("partials/head.php");
-	include ("db.php");
+	include ("docs/classes.php");
 
 	$allDVD = DVD::getProducts();
 	$allBook = Book::getProducts();
@@ -13,7 +13,7 @@
 
 	foreach($allProducts as $row){
 		$results .= '<div class="card hover-overlay hover-zoom hover-shadow ripple">
-						<input type="checkbox" class="delete-checkbox" name="delete[]" row="<?= '.$row->SKU.' ?>" id="delete-checkbox">
+						<input type="checkbox" class="delete-checkbox" name="delete[]" row='.$row->SKU.' id="delete-checkbox">
 						<a href="edit-product.php?SKU='.$row->SKU.'&type='.$row->productType.'">
 							<img alt="Edit listing" src="img/edit_black_24dp.svg" class="edit-content">
                         </a>

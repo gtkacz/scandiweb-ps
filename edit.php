@@ -1,5 +1,5 @@
 <?php
-include "db.php";
+include "docs/classes.php";
 
 if(isset($_POST["SKU"], $_POST["Name"], $_POST["Price"], $_POST["productType"])){
     $productType = $_POST["productType"];
