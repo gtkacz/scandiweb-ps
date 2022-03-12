@@ -4,11 +4,14 @@
 	include ("partials/head.php");
 	include ("db.php");
 
-	$allTeste = DVD::getProducts();
+	$allDVD = DVD::getProducts();
+	$allBook = Book::getProducts();
+	$allFurniture = Furniture::getProducts();
+	$allProducts = array_merge($allDVD, $allBook, $allFurniture);
 
 	$results = "";
 
-	foreach($allTeste as $row){
+	foreach($allProducts as $row){
 		$results .= '<div class="card hover-overlay hover-zoom hover-shadow ripple">
 						<input type="checkbox" class="delete-checkbox" name="delete[]" row="<?= '.$row->SKU.' ?>" id="delete-checkbox">
 						<input type="image" class="edit-content" src="img/edit_black_24dp.svg" value=""/>
