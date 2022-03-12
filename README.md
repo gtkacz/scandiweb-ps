@@ -1,3 +1,11 @@
-<center>
-    <img src="img/white logo.png">
-</center>
+<p align="center">
+    <img src="img/white logo.png" style="height: 4ch;">
+</p>
+
+<hr>
+
+|   |   |   |   |   |
+|---|---|---|---|---|
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
