@@ -20,12 +20,12 @@
         <div class="form">
             <div class="form-item">
                 <label for="SKU">SKU</label>
-                <input type="text" id="sku" name="SKU" placeholder="Enter product SKU" oninvalid="this.setCustomValidity('Please, submit required data')" oninput="this.setCustomValidity('')" required><br>
+                <input type="text" maxlength="30" id="sku" name="SKU" placeholder="Enter product SKU" oninvalid="this.setCustomValidity('Please, submit required data')" oninput="this.setCustomValidity('')" required><br>
             </div>
 
             <div class="form-item">
                 <label for="Name">Name</label>
-                <input type="text" id="name" name="Name" placeholder="Enter product name" oninvalid="this.setCustomValidity('Please, submit required data')" oninput="this.setCustomValidity('')" required><br>
+                <input type="text" maxlength="65" id="name" name="Name" placeholder="Enter product name" oninvalid="this.setCustomValidity('Please, submit required data')" oninput="this.setCustomValidity('')" required><br>
             </div>
 
             <div class="form-item">
