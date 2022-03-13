@@ -29,11 +29,12 @@ class Database{
 
     private function execute($query, $params = []){
         try{
-          $statement = $this->connection->prepare($query);
-          $statement->execute($params);
-          return $statement;
+            $statement = $this->connection->prepare($query);
+            $statement->execute($params);
+            return $statement;
         }catch(PDOException $e){
-          die('ERROR: '.$e->getMessage());
+            echo $query;
+            die('ERROR: '.$e->getMessage());
         }
       }
 
@@ -48,9 +49,11 @@ class Database{
 
     public function select($where = null, $order = null, $fields = "*"){
         $where = strlen($where) ? 'WHERE '.$where : '';
+        // $where = "WHERE '".$where."'";
         $order = strlen($order) ? 'ORDER BY '.$order : '';
 
-        $query = 'SELECT '.$fields.' FROM '.$this->table.' '.$where.' '.$order.''; 
+        $query = 'SELECT '.$fields.' FROM '.$this->table.' '.$where.' '.$order.'';
+        // $query = "SELECT ".$fields." FROM '".$this->table."' '".$where."' ";
         
         return $this->execute($query);
     }
@@ -65,7 +68,8 @@ class Database{
     }
 
     public function delete($where){
-        $query = 'DELETE FROM '.$this->table.' WHERE '.$where;
+        $query = "DELETE FROM {$this->table} WHERE {$where}";
+        // $query = "DELETE FROM products WHERE '$where'";
     
         $this->execute($query);
     
@@ -122,7 +126,7 @@ class DVD extends Product{
     }
 
     public function remove(){
-        return (new Database('products'))->delete('SKU = '.$this->SKU);
+        return (new Database('products'))->delete("SKU = {$this->SKU}");
     }
 
     public function attributeString() : string {
@@ -140,7 +144,7 @@ class Book extends Product{
     }
 
     public function remove(){
-        return (new Database('products'))->delete('SKU = '.$this->SKU);
+        return (new Database('products'))->delete("SKU = {$this->SKU}");
     }
 
     public function attributeString() : string {
@@ -158,7 +162,7 @@ class Furniture extends Product{
     }
 
     public function remove(){
-        return (new Database('products'))->delete('SKU = '.$this->SKU);
+        return (new Database('products'))->delete("SKU = {$this->SKU}");
     }
 
     public function attributeString() : string {
