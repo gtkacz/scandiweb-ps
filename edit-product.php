@@ -13,17 +13,6 @@ if(isset($_GET["SKU"], $_GET["type"])){
         'Furniture' => Furniture::getProduct($SKU),
     };
 
-    switch($Type){
-        case "DVD":
-            $product = DVD::getProduct($SKU);
-            break;
-        case "Book":
-            $product = Book::getProduct($SKU);
-            break;
-        case "Furniture":
-            $product = Furniture::getProduct($SKU);
-            break;
-    }
 } else{
     exit;
 }
