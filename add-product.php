@@ -64,15 +64,15 @@
 
             <div class="dynamic-show form-item">
                 <label for="height" class="furniture hide">Height (CM)</label>
-                <input type="number" min="0" oninput="validity.valid||(value='');" id="height" name="height" class="furniture hide" placeholder="Enter product height" required>
+                <input type="number" onChange="update('height', 'attrupdate');" min="0" oninput="validity.valid||(value='');" id="height" name="height" class="furniture hide" placeholder="Enter product height" required>
             </div>
             <div class="dynamic-show form-item">
                 <label for="width" class="furniture hide">Width (CM)</label>
-                <input type="number" min="0" oninput="validity.valid||(value='');" id="width" name="width" class="furniture hide" placeholder="Enter product width" required>
+                <input type="number" onChange="update('width', 'attrupdate');" min="0" oninput="validity.valid||(value='');" id="width" name="width" class="furniture hide" placeholder="Enter product width" required>
             </div>
             <div class="dynamic-show form-item">
                 <label for="length" class="furniture hide">Length (CM)</label>
-                <input type="number" min="0" oninput="validity.valid||(value='');" id="length" name="length" class="furniture hide" placeholder="Enter product length" required>
+                <input type="number" onChange="update('length', 'attrupdate');" min="0" oninput="validity.valid||(value='');" id="length" name="length" class="furniture hide" placeholder="Enter product length" required>
                 <span class="description furniture hide">* Please provide the dimensions of the piece of furniture in centimeters.</span><br>
             </div>
         </div>

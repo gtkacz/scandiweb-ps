@@ -16,23 +16,22 @@ $(document).on('change', '.div-toggle', function() {
 function update(source, target){
     var update_text = document.getElementById(source).value;
 
-    if(target == "priceupdate"){
-        update_text += " $"
+    switch(source){
+        case "price":
+            update_text += " $";
+            break;
+        case "size":
+            update_text += " MB";
+            break;
+        case "weight":
+            update_text += " KG";
+            break;
+        default:
+            var text1 = document.getElementById("height").value;
+            var text2 = document.getElementById("width").value;
+            var text3 = document.getElementById("length").value;
+            update_text = text1 + "x" + text2 + "x" + text3;
     }
-
-    if(source == "size"){
-        update_text += " MB"
-    }
-    else if(source == "weight"){
-        update_text += " KG"
-    }
-    else if((source == "height") || (source == "width") || (source == "length")){
-        var text1 = document.getElementById("height").value;
-        var text2 = document.getElementById("width").value;
-        var text3 = document.getElementById("length").value;
-        update_text = text1 + "x" + text2 + "x" + text3;
-    }
-
     document.getElementById(target).textContent = update_text;
     document.getElementById(target).style.color = "black";
 }
