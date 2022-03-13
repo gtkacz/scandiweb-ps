@@ -18,19 +18,22 @@ function update(source, target){
 
     switch(source){
         case "price":
-            update_text += " $";
+            update_text = "Price: " + update_text + " $";
             break;
         case "size":
-            update_text += " MB";
+            update_text = "Size: " + update_text + " MB";
             break;
         case "weight":
-            update_text += " KG";
+            update_text = "Weight: " + update_text + " KG";
             break;
-        default:
+        case "width":
+        case "length":
+        case height:
             var text1 = document.getElementById("height").value;
             var text2 = document.getElementById("width").value;
             var text3 = document.getElementById("length").value;
-            update_text = text1 + "x" + text2 + "x" + text3;
+            update_text = "Dimension: " + text1 + "x" + text2 + "x" + text3;
+            break;
     }
     document.getElementById(target).textContent = update_text;
     document.getElementById(target).style.color = "black";

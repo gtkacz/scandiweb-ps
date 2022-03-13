@@ -6,6 +6,7 @@ if(isset($_POST['but_delete'])){
     foreach($_POST['delete'] as $deleteid){
       $separate = explode("+", $deleteid);
       $SKU = $separate[0];
+      $SKU = "'$SKU'";
       $productType = $separate[1];
 
       $productDelete = match($productType){

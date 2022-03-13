@@ -126,7 +126,7 @@ class DVD extends Product{
     }
 
     public function remove(){
-        return (new Database('products'))->delete("SKU = {$this->SKU}");
+        return (new Database('products'))->delete("SKU = '{$this->SKU}'");
     }
 
     public function attributeString() : string {
@@ -144,7 +144,7 @@ class Book extends Product{
     }
 
     public function remove(){
-        return (new Database('products'))->delete("SKU = {$this->SKU}");
+        return (new Database('products'))->delete("SKU = '{$this->SKU}'");
     }
 
     public function attributeString() : string {
@@ -162,7 +162,7 @@ class Furniture extends Product{
     }
 
     public function remove(){
-        return (new Database('products'))->delete("SKU = {$this->SKU}");
+        return (new Database('products'))->delete("SKU = '{$this->SKU}'");
     }
 
     public function attributeString() : string {
