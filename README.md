@@ -24,6 +24,7 @@
 
 <p align="center">
     <h2 align="center">Database structure:</h2>
+    <center>
     <table align="center">
         <tr>
             <th>Name</th>
@@ -56,6 +57,7 @@
             <td>-</td>
         </tr>
     </table>
+    </center>
 </p>
 
 <hr>

@@ -16,6 +16,12 @@ $(document).on('change', '.div-toggle', function() {
 function update(source, target){
     var update_text = document.getElementById(source).value;
 
+    if(update_text == ""){
+        document.getElementById(target).textContent = "Placeholder";
+        document.getElementById(target).style.color = "gray";
+    }
+
+    else{
     switch(source){
         case "price":
             update_text = "Price: " + update_text + " $";
@@ -28,7 +34,7 @@ function update(source, target){
             break;
         case "width":
         case "length":
-        case height:
+        case "height":
             var text1 = document.getElementById("height").value;
             var text2 = document.getElementById("width").value;
             var text3 = document.getElementById("length").value;
@@ -37,4 +43,5 @@ function update(source, target){
     }
     document.getElementById(target).textContent = update_text;
     document.getElementById(target).style.color = "black";
+    }
 }
