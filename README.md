@@ -1,8 +1,8 @@
 <center>
 <p align="center">
     <img src="img/white logo.png" style="height: 7ch;"><br>
-    <h1>Scandiweb Junior Developer Test Task</h1>
-    <h3>Available at: <a href="scandiweb-test-assignment.rf.gd/">scandiweb-test-assignment.rf.gd/</a></h3>
+    <h1 align="center">Scandiweb Junior Developer Test Task</h1>
+    <h4 align="center">Available at: <a href="scandiweb-test-assignment.rf.gd/">scandiweb-test-assignment.rf.gd/</a></h4>
 </p>
 </center>
 
@@ -11,12 +11,12 @@
 <p align="center">
     <h2 align="center">Built with:</h2>
     <ul align="center">
-        <li>PHP</li>
-        <li>MySQL</li>
-        <li>javascript</li>
-        <li>jQuery</li>
-        <li>Bootstrap</li>
-        <li>Isotope</li>
+        <li align="center">PHP</li>
+        <li align="center">MySQL</li>
+        <li align="center">javascript</li>
+        <li align="center">jQuery</li>
+        <li align="center">Bootstrap</li>
+        <li align="center">Isotope</li>
     </ul>
 </p>
 
