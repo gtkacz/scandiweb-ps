@@ -1,14 +1,14 @@
-<!-- <?php
-	// $db = new Mysqli;
-    // $db->connect('sql302.epizy.com', 'epiz_31256053', '7dD59QGe4nloyJ', 'epiz_31256053_product_list');
-?> -->
-
 <?php
 class Database{
     const HOST = "localhost";
     const USER = "root";
     const PASSWORD = "";
     const DBNAME = "product_list";
+
+    // const HOST = "sql205.iceiy.com";
+    // const USER = "icei_31280718";
+    // const PASSWORD = "IMVf6TvQhqHy";
+    // const DBNAME = "icei_31280718_product_list";
 
     private $table;
     private $connection;

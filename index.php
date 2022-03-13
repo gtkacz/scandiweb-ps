@@ -4,6 +4,8 @@
 	include ("partials/head.php");
 	include ("docs/classes.php");
 
+	echo phpinfo();
+
 	$allDVD = DVD::getProducts();
 	$allBook = Book::getProducts();
 	$allFurniture = Furniture::getProducts();
