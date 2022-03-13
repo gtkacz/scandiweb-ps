@@ -56,5 +56,12 @@
             <td>-</td>
         </tr>
     </table>
-    <small align="center">&copy; 2022 Gabriel Tkacz</small>
 </p>
+
+<hr>
+
+<center>
+<p align="center">
+<small align="center">&copy; 2022 Gabriel Tkacz</small>
+</p>
+</center>
