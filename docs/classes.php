@@ -33,7 +33,6 @@ class Database{
             $statement->execute($params);
             return $statement;
         }catch(PDOException $e){
-            echo $query;
             die('ERROR: '.$e->getMessage());
         }
       }
