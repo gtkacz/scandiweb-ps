@@ -10,6 +10,7 @@
 
 <p align="center">
     <h2 align="center">Built with:</h2>
+    <center>
     <ul align="center">
         <li align="center">PHP</li>
         <li align="center">MySQL</li>
@@ -18,6 +19,7 @@
         <li align="center">Bootstrap</li>
         <li align="center">Isotope</li>
     </ul>
+    </center>
 </p>
 
 <p align="center">
@@ -54,4 +56,5 @@
             <td>-</td>
         </tr>
     </table>
+    <small align="center">&copy; 2022 Gabriel Tkacz</small>
 </p>
