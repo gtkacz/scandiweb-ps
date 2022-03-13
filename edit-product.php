@@ -3,10 +3,14 @@ include ("docs/classes.php");
 
 if(isset($_GET["SKU"], $_GET["type"])){
     $Type = $_GET["type"];
+
+    $SKU = $_GET["SKU"];
+    $SKU = "'$SKU'";
+
     $product = match($Type){
-        'DVD' => DVD::getProduct($_GET['SKU']),
-        'Book' => Book::getProduct($_GET['SKU']),
-        'Furniture' => Furniture::getProduct($_GET['SKU']),
+        'DVD' => DVD::getProduct($SKU),
+        'Book' => Book::getProduct($SKU),
+        'Furniture' => Furniture::getProduct($SKU),
     };
 } else{
     exit;
