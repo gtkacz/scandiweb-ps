@@ -45,3 +45,14 @@ function update(source, target){
     document.getElementById(target).style.color = "black";
     }
 }
+
+function check_active(){
+    var checkboxes = document.querySelectorAll('#delete-checkbox:checked');
+    var activebtn = document.getElementById('delete-product-btn');
+
+    if(checkboxes.length > 0){
+        activebtn.disabled = 0;
+    } else{
+        activebtn.disabled = 1;
+    }
+}
