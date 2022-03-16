@@ -21,7 +21,7 @@
 						<span>'.$row->SKU.'</span>
 						<span>'.$row->NAME.'</span>
 						<span>'.$row->PRICE.' $</span>
-						<span>'.$row->attributeString().'</span>
+						<span>'.$row->getAttribute().'</span>
 					</div>';
 	}
 	?>

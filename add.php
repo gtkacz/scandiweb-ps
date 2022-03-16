@@ -10,7 +10,7 @@ if(isset($_POST["SKU"], $_POST["Name"], $_POST["Price"], $_POST["productType"]))
     $newProduct->Name = $_POST["Name"];
     $newProduct->Price = $_POST["Price"];
     $newProduct->productType = $productType;
-    $newProduct->createAttribute($_POST);
+    $newProduct->setAttribute($_POST);
 
     $newProduct->create();
 

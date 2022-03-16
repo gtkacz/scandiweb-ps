@@ -68,7 +68,6 @@ class Database{
 
     public function delete($where){
         $query = "DELETE FROM {$this->table} WHERE {$where}";
-        // $query = "DELETE FROM products WHERE '$where'";
     
         $this->execute($query);
     
@@ -96,6 +95,10 @@ abstract class Product{
         return true;
     }
 
+    public function remove(){
+        return (new Database('products'))->delete("SKU = '{$this->SKU}'");
+    }
+
     public function edit($oldSKU){
         $db = new Database("products");
         $db->update('SKU = '.$oldSKU, [
@@ -109,11 +112,10 @@ abstract class Product{
         return true;
       }
 
-    abstract public static function getProducts($where = null, $order = null);
+    abstract public static function getProducts($where = null, $order = "'SKU'");
     abstract public static function getProduct($SKU);
-    abstract public function createAttribute($data);
-    abstract public function remove();
-    abstract public function attributeString() : string;
+    abstract public function setAttribute($data);
+    abstract public function getAttribute() : string;
 }
 
 class DVD extends Product{
@@ -125,15 +127,11 @@ class DVD extends Product{
         return (new Database("products"))->select("SKU = $SKU")->fetchObject(static::class);
     }
 
-    public function createAttribute($data){
+    public function setAttribute($data){
         $this->productAttribute = $data['size'];
     }
-    
-    public function remove(){
-        return (new Database('products'))->delete("SKU = '{$this->SKU}'");
-    }
 
-    public function attributeString() : string {
+    public function getAttribute() : string {
         return "Size: $this->productAttribute MB";
     }
 }
@@ -147,15 +145,11 @@ class Book extends Product{
         return (new Database("products"))->select("SKU = $SKU")->fetchObject(static::class);
     }
 
-    public function createAttribute($data){
+    public function setAttribute($data){
         $this->productAttribute = $data['weight'];
     }
 
-    public function remove(){
-        return (new Database('products'))->delete("SKU = '{$this->SKU}'");
-    }
-
-    public function attributeString() : string {
+    public function getAttribute() : string {
         return "Weight: $this->productAttribute KG";
     }
 }
@@ -169,7 +163,7 @@ class Furniture extends Product{
         return (new Database("products"))->select("SKU = $SKU")->fetchObject(static::class);
     }
 
-    public function createAttribute($data){
+    public function setAttribute($data){
         $height = $data["height"];
         $width = $data["width"];
         $length = $data["length"];
@@ -177,11 +171,7 @@ class Furniture extends Product{
         $this->productAttribute = "${height}x${width}x${length}";
     }
 
-    public function remove(){
-        return (new Database('products'))->delete("SKU = '{$this->SKU}'");
-    }
-
-    public function attributeString() : string {
+    public function getAttribute() : string {
         return "Dimension: $this->productAttribute";
     }
 }
