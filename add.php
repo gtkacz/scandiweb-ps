@@ -1,16 +1,38 @@
 <?php
-include "docs/classes.php";
 
-if(isset($_POST["SKU"], $_POST["Name"], $_POST["Price"], $_POST["productType"])){
+use App\models\Book;
+use App\models\DVD;
+use App\models\Furniture;
+
+if (isset($_POST["SKU"], $_POST["Name"], $_POST["Price"], $_POST["productType"])) {
     $productType = $_POST["productType"];
 
-    $newProduct = new $productType;
+    switch ($productType) {
+        case "DVD":
+            $productAttribute = $_POST["size"];
+            $newProduct = new DVD;
+            break;
+
+        case "Book":
+            $productAttribute = $_POST["weight"];
+            $newProduct = new Book;
+            break;
+
+        case "Furniture":
+            $height = $_POST["height"];
+            $width = $_POST["width"];
+            $length = $_POST["length"];
+
+            $productAttribute = "${height}x${width}x${length}";
+            $newProduct = new Furniture;
+            break;
+    }
 
     $newProduct->SKU = $_POST["SKU"];
     $newProduct->Name = $_POST["Name"];
     $newProduct->Price = $_POST["Price"];
     $newProduct->productType = $productType;
-    $newProduct->setAttribute($_POST);
+    $newProduct->productAttribute = $productAttribute;
 
     $newProduct->create();
 
