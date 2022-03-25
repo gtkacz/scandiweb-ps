@@ -20,7 +20,7 @@ $results = "";
 foreach ($allProducts as $row) {
     $results .= '<div class="card hover-overlay hover-zoom hover-shadow ripple">
 						<input type="checkbox" onchange="check_active()" class="delete-checkbox" name="delete[]" value=' . $row->SKU . '+' . $row->productType . ' id="delete-checkbox">
-						<a href="edit-product?SKU=' . $row->SKU . '&type=' . $row->productType . '">
+						<a href="resources/views/edit-product?SKU=' . $row->SKU . '&type=' . $row->productType . '">
 							<img alt="Edit listing" src="resources/images/edit_black_24dp.svg" class="edit-content">
                         </a>
 						<span>' . $row->SKU . '</span>

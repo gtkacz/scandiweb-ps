@@ -59,6 +59,54 @@
     </table>
     </center>
 </p>
+<br>
+<h2 align="center">File structure:</h2>
+
+    ```
+    📦root
+    ┣ 📂app
+    ┃ ┗ 📂models
+    ┃ ┃ ┣ 📜Book.php
+    ┃ ┃ ┣ 📜Database.php
+    ┃ ┃ ┣ 📜DVD.php
+    ┃ ┃ ┣ 📜Furniture.php
+    ┃ ┃ ┗ 📜Product.php
+    ┣ 📂resources
+    ┃ ┣ 📂css
+    ┃ ┃ ┗ 📜main.css
+    ┃ ┣ 📂images
+    ┃ ┃ ┣ 📜2015-11-09_scandiweb_logo.png
+    ┃ ┃ ┣ 📜demo.gif
+    ┃ ┃ ┣ 📜edit_black_24dp.svg
+    ┃ ┃ ┣ 📜favico.ico
+    ┃ ┃ ┣ 📜github.png
+    ┃ ┃ ┣ 📜QA.png
+    ┃ ┃ ┗ 📜white logo.png
+    ┃ ┣ 📂js
+    ┃ ┃ ┗ 📜main.js
+    ┃ ┗ 📂views
+    ┃ ┃ ┣ 📂partials
+    ┃ ┃ ┃ ┣ 📜footer.php
+    ┃ ┃ ┃ ┗ 📜head.php
+    ┃ ┃ ┣ 📜add-product.php
+    ┃ ┃ ┣ 📜add.php
+    ┃ ┃ ┣ 📜delete.php
+    ┃ ┃ ┣ 📜edit-product.php
+    ┃ ┃ ┗ 📜edit.php
+    ┣ 📂vendor
+    ┃ ┣ 📂composer
+    ┃ ┃ ┣ 📜autoload_classmap.php
+    ┃ ┃ ┣ 📜autoload_namespaces.php
+    ┃ ┃ ┣ 📜autoload_psr4.php
+    ┃ ┃ ┣ 📜autoload_real.php
+    ┃ ┃ ┣ 📜autoload_static.php
+    ┃ ┃ ┣ 📜ClassLoader.php
+    ┃ ┃ ┗ 📜LICENSE
+    ┃ ┗ 📜autoload.php
+    ┣ 📜.htaccess
+    ┣ 📜composer.json
+    ┗ 📜index.php
+    ```
 
 <hr>
 

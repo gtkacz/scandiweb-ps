@@ -1,5 +1,5 @@
 <?php
-require_once("vendor/autoload.php");
+require_once("../../vendor/autoload.php");
 
 use App\models\Book;
 use App\models\DVD;
@@ -34,7 +34,7 @@ include("partials/head.php");
             <h2>Product Edit</h2>
             <div>
                 <button type="submit" class="btn btn-success btn-size">Save</button>
-                <button type="button" class="btn btn-danger btn-size" onclick="window.location.href='index'">Cancel
+                <button type="button" class="btn btn-danger btn-size" onclick="window.location.href='../../index'">Cancel
                 </button>
             </div>
         </div>
