@@ -44,11 +44,11 @@ include("partials/head.php");
                        value=<?php echo $product->SKU ?> oninvalid="this.setCustomValidity('Please, submit required data')"
                 oninput="this.setCustomValidity('')" required><br>
                 <input type="text" class="fake-input" placeholder="Edit name" id="name" name="Name"
-                       value=<?php echo $product->Name ?> oninvalid="this.setCustomValidity('Please, submit required
+                       value=<?php echo $product->NAME ?> oninvalid="this.setCustomValidity('Please, submit required
                        data')" oninput="this.setCustomValidity('')" required><br>
                 <input type="text" class="fake-input" placeholder="Edit price" pattern="[0-9]+" min="0"
                        oninput="validity.valid||(value='');" id="price" name="Price"
-                       value=<?php echo $product->Price ?> oninvalid="this.setCustomValidity('Please, submit required
+                       value=<?php echo $product->PRICE ?> oninvalid="this.setCustomValidity('Please, submit required
                        data')" oninput="this.setCustomValidity('')" required><br>
                 <input type="hidden" id="productType" name="productType"
                        value=<?php echo $product->productType ?> required><br>
