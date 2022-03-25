@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <?php
 require_once("../../vendor/autoload.php");
 
@@ -101,8 +99,5 @@ include("partials/head.php");
             </div>
         </div>
     </form>
-    <?php include("partials/footer.php"); ?>
-
 </div>
-</body>
-</html>
+<?php include("partials/footer.php"); ?>

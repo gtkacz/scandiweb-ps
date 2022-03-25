@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <?php
 require_once("vendor/autoload.php");
 
@@ -24,8 +22,8 @@ foreach ($allProducts as $row) {
 							<img alt="Edit listing" src="resources/images/edit_black_24dp.svg" class="edit-content">
                         </a>
 						<span>' . $row->SKU . '</span>
-						<span>' . $row->NAME . '</span>
-						<span>' . $row->PRICE . ' $</span>
+						<span>' . $row->Name . '</span>
+						<span>' . $row->Price . ' $</span>
 						<span>' . $row->attributeString() . '</span>
 					</div>';
 }
@@ -51,7 +49,5 @@ foreach ($allProducts as $row) {
             <?= $results ?>
         </div>
     </form>
-    <?php include("resources/views/partials/footer.php"); ?>
 </div>
-</body>
-</html>
+<?php include("resources/views/partials/footer.php"); ?>

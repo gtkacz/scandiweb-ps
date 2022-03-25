@@ -13,3 +13,6 @@
     </a><br>
     <small>&copy; <?php echo date("Y"); ?> Gabriel Tkacz</small>
 </center>
+
+</body>
+</html>
