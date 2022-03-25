@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
+require_once("vendor/autoload.php");
+
 include("partials/head.php");
 
 ?>
@@ -11,7 +13,8 @@ include("partials/head.php");
             <h2>Product Add</h2>
             <div>
                 <button type="submit" class="btn btn-success btn-size">Save</button>
-                <button type="button" class="btn btn-danger btn-size" onclick="window.location.href='index'">Cancel</button>
+                <button type="button" class="btn btn-danger btn-size" onclick="window.location.href='index'">Cancel
+                </button>
             </div>
         </div>
 

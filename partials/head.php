@@ -11,14 +11,14 @@
     <script type="text/javascript" src="docs/main.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secweb Junior Developer Test Task</title>
+    <title>Scandiweb Junior Developer Test Task</title>
 </head>
 
 <div class="pos-f-t">
     <div class="collapse" id="navbarToggleExternalContent">
         <div class="bg-danger p-4">
             <img src="img/white logo.png" style="padding-bottom: 1ch; height: 5ch; cursor: default">
-            <h4 class="text-white">Secweb Junior Developer Test Task</h4>
+            <h4 class="text-white">Scandiweb Junior Developer Test Task</h4>
             <small class="text-white">Made by <a href="https://github.com/gtkacz/scandiweb-ps" target="_blank" title="View source code">Gabriel Tkacz</a></small>
         </div>
     </div>

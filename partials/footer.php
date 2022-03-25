@@ -7,7 +7,7 @@
 <hr>
 
 <center>
-    <span>Secweb Test Assignment</span><br>
+    <span>Scandiweb Test Assignment</span><br>
     <a href="https://github.com/gtkacz/scandiweb-ps" target="_blank">
         <img alt="Source code" src="img/github.png" style="padding: 1ch; height: 5ch;">
     </a><br>

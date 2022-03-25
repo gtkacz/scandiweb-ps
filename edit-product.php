@@ -1,20 +1,25 @@
 <?php
+require_once("vendor/autoload.php");
 
 use App\models\Book;
 use App\models\DVD;
 use App\models\Furniture;
 
 if (isset($_GET["SKU"], $_GET["type"])) {
+
     $productType = $_GET["type"];
+    $className = "App\\models\\$productType";
+
 
     $SKU = $_GET["SKU"];
     $SKU = "'$SKU'";
 
-    $product = call_user_func([$productType, 'getProduct'], $SKU);
+    $product = call_user_func([$className, 'getProduct'], $SKU);
 
-    } else {
-        exit;
-    }
+
+} else {
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -39,11 +44,11 @@ include("partials/head.php");
                        value=<?php echo $product->SKU ?> oninvalid="this.setCustomValidity('Please, submit required data')"
                 oninput="this.setCustomValidity('')" required><br>
                 <input type="text" class="fake-input" placeholder="Edit name" id="name" name="Name"
-                       value=<?php echo $product->NAME ?> oninvalid="this.setCustomValidity('Please, submit required
+                       value=<?php echo $product->Name ?> oninvalid="this.setCustomValidity('Please, submit required
                        data')" oninput="this.setCustomValidity('')" required><br>
                 <input type="text" class="fake-input" placeholder="Edit price" pattern="[0-9]+" min="0"
                        oninput="validity.valid||(value='');" id="price" name="Price"
-                       value=<?php echo $product->PRICE ?> oninvalid="this.setCustomValidity('Please, submit required
+                       value=<?php echo $product->Price ?> oninvalid="this.setCustomValidity('Please, submit required
                        data')" oninput="this.setCustomValidity('')" required><br>
                 <input type="hidden" id="productType" name="productType"
                        value=<?php echo $product->productType ?> required><br>

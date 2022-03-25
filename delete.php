@@ -1,4 +1,5 @@
 <?php
+require_once("vendor/autoload.php");
 
 use App\models\Book;
 use App\models\DVD;
@@ -12,8 +13,10 @@ try {
                 $SKU = $separate[0];
                 $SKU = "'$SKU'";
                 $productType = $separate[1];
+                $className = "App\\models\\$productType";
 
-                $productDelete = call_user_func([$productType, 'getProduct'], $SKU);
+
+                $productDelete = call_user_func([$className, 'getProduct'], $SKU);
   
                 $productDelete->remove();
             }

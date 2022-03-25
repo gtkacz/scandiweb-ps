@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-
-//Auto-loading PSR-4
 require_once("vendor/autoload.php");
 
 include("partials/head.php");
@@ -26,8 +24,8 @@ foreach ($allProducts as $row) {
 							<img alt="Edit listing" src="img/edit_black_24dp.svg" class="edit-content">
                         </a>
 						<span>' . $row->SKU . '</span>
-						<span>' . $row->NAME . '</span>
-						<span>' . $row->PRICE . ' $</span>
+						<span>' . $row->Name . '</span>
+						<span>' . $row->Price . ' $</span>
 						<span>' . $row->attributeString() . '</span>
 					</div>';
 }
