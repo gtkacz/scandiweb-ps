@@ -1,6 +1,8 @@
-Options +MultiViews
+Options +FollowSymLinks +MultiViews
 RewriteEngine On
-RewriteBase /
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteBase /scandiweb-ps/
+
+RewriteRule ^resources/views/(.+)\.php$ $1 [L,NC,R=302]
+
+RewriteCond %{DOCUMENT_ROOT}/scandiweb-ps/resources/views/$1.php -f
+RewriteRule ^(.+?)/?$ resources/views/$1.php [END]

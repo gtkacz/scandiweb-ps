@@ -1,10 +1,14 @@
+<?php
+$parent_dir = dirname(__FILE__) . "/../";
+?>
+
 <head>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="../../images/favico.ico"/>
-    <link rel="stylesheet" type="text/css" href="../..//css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -17,7 +21,7 @@
 <div class="pos-f-t">
     <div class="collapse" id="navbarToggleExternalContent">
         <div class="bg-danger p-4">
-            <img src="img/white logo.png" style="padding-bottom: 1ch; height: 5ch; cursor: default">
+            <img src=<?php echo $parent_dir . "images/white logo.png" ?> style="padding-bottom: 1ch; height: 5ch; cursor: default">
             <h4 class="text-white">Scandiweb Junior Developer Test Task</h4>
             <small class="text-white">Made by <a href="https://github.com/gtkacz/scandiweb-ps" target="_blank" title="View source code">Gabriel Tkacz</a></small>
         </div>

@@ -62,7 +62,7 @@
 <br>
 <h2 align="center">File structure:</h2>
 
-    ```
+    
     📦root
     ┣ 📂app
     ┃ ┗ 📂models
@@ -107,7 +107,6 @@
     ┣ 📝LICENSE
     ┣ 📑composer.json
     ┗ 📜index.php
-    ```
 
 <hr>
 

@@ -28,5 +28,5 @@ try {
     echo $t->getMessage(), " at ", $t->getFile(), ":", $t->getLine(), "\n";
 }
 
-header('location: ../../index');
+header('location: ../../');
 ?>
