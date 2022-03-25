@@ -3,7 +3,7 @@
 <?php
 require_once("vendor/autoload.php");
 
-include("partials/head.php");
+include("resources/views/partials/head.php");
 
 use App\models\Book;
 use App\models\DVD;
@@ -21,7 +21,7 @@ foreach ($allProducts as $row) {
     $results .= '<div class="card hover-overlay hover-zoom hover-shadow ripple">
 						<input type="checkbox" onchange="check_active()" class="delete-checkbox" name="delete[]" value=' . $row->SKU . '+' . $row->productType . ' id="delete-checkbox">
 						<a href="edit-product?SKU=' . $row->SKU . '&type=' . $row->productType . '">
-							<img alt="Edit listing" src="img/edit_black_24dp.svg" class="edit-content">
+							<img alt="Edit listing" src="resources/images/edit_black_24dp.svg" class="edit-content">
                         </a>
 						<span>' . $row->SKU . '</span>
 						<span>' . $row->NAME . '</span>
@@ -32,7 +32,7 @@ foreach ($allProducts as $row) {
 ?>
 <body>
 <div class="container">
-    <form method="post" action="delete">
+    <form method="post" action="resources/views/delete">
         <div class="title">
             <h2>Product List</h2>
             <div>
@@ -51,7 +51,7 @@ foreach ($allProducts as $row) {
             <?= $results ?>
         </div>
     </form>
-    <?php include("partials/footer.php"); ?>
+    <?php include("resources/views/partials/footer.php"); ?>
 </div>
 </body>
 </html>

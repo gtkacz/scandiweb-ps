@@ -1,6 +1,6 @@
 <center>
     <p align="center">
-        <img src="img/white logo.png" style="height: 7ch;"><br>
+        <img src="resources/images/white logo.png" style="height: 7ch;"><br>
         <h1 align="center">Scandiweb Junior Developer Test Task</h1>
         <h4 align="center">Available at: <a href="scandiweb-test-assignment.rf.gd/">scandiweb-test-assignment.rf.gd/</a></h4>
     </p>
@@ -65,9 +65,9 @@
 <center>
     <p align="center">
         <h3 align="center">Demonstration</h3>
-        <img src="img/demo.gif" style="height: 50ch"><br><br>
+        <img src="resources/images/demo.gif" style="height: 50ch"><br><br>
         <h3 align="center">AutoQA approval</h3>
-        <img src="img/QA.png" style="height: 50ch;">
+        <img src="resources/images/QA.png" style="height: 50ch;">
     </p>
 </center>
 
