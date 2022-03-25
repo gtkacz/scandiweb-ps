@@ -6,19 +6,14 @@ use App\models\DVD;
 use App\models\Furniture;
 
 if (isset($_GET["SKU"], $_GET["type"])) {
-
     $productType = $_GET["type"];
     $className = "App\\models\\$productType";
-
 
     $SKU = $_GET["SKU"];
     $SKU = "'$SKU'";
 
     $product = call_user_func([$className, 'getProduct'], $SKU);
-
-    // echo '<pre>'; print_r($product); echo '</pre>';
-
-
+    print_r($product);
 } else {
     exit;
 }

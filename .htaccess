@@ -2,7 +2,7 @@ Options +FollowSymLinks +MultiViews
 RewriteEngine On
 RewriteBase /scandiweb-ps/
 
-RewriteRule ^resources/views/(.+)\.php$ $1 [L,NC,R=302]
+RewriteRule ^resources/views/(.+)\.php$ $1 [L,NC,R=301]
 
 RewriteCond %{DOCUMENT_ROOT}/scandiweb-ps/resources/views/$1.php -f
 RewriteRule ^(.+?)/?$ resources/views/$1.php [END]
