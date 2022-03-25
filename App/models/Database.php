@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Dell
- * Date: 3/24/2022
- * Time: 7:24 PM
- */
-
 namespace App\models;
 
 use PDO;
@@ -30,7 +23,9 @@ class Database
     public function __construct($table = null)
     {
         $this->table = $table;
-        $this->createConnection();
+        if(!isset($this->connection)){
+            $this->createConnection();
+        }
     }
 
     private function createConnection()
@@ -67,11 +62,9 @@ class Database
     public function select($where = null, $order = null, $fields = "*")
     {
         $where = strlen($where) ? 'WHERE ' . $where : '';
-        // $where = "WHERE '".$where."'";
         $order = strlen($order) ? 'ORDER BY ' . $order : '';
 
         $query = 'SELECT ' . $fields . ' FROM ' . $this->table . ' ' . $where . ' ' . $order . '';
-        // $query = "SELECT ".$fields." FROM '".$this->table."' '".$where."' ";
 
         return $this->execute($query);
     }
@@ -89,7 +82,6 @@ class Database
     public function delete($where)
     {
         $query = "DELETE FROM {$this->table} WHERE {$where}";
-        // $query = "DELETE FROM products WHERE '$where'";
 
         $this->execute($query);
 

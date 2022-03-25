@@ -5,20 +5,16 @@ use App\models\DVD;
 use App\models\Furniture;
 
 if (isset($_GET["SKU"], $_GET["type"])) {
-    $Type = $_GET["type"];
+    $productType = $_GET["type"];
 
     $SKU = $_GET["SKU"];
     $SKU = "'$SKU'";
 
-    $product = match($Type){
-    'DVD' => DVD::getProduct($SKU),
-        'Book' => Book::getProduct($SKU),
-        'Furniture' => Furniture::getProduct($SKU),
-    };
+    $product = call_user_func([$productType, 'getProduct'], $SKU);
 
-} else {
-    exit;
-}
+    } else {
+        exit;
+    }
 ?>
 
 <!DOCTYPE html>

@@ -13,14 +13,10 @@ try {
                 $SKU = "'$SKU'";
                 $productType = $separate[1];
 
-                $productDelete = match($productType){
-                'DVD' => DVD::getProduct($SKU),
-            'Book' => Book::getProduct($SKU),
-            'Furniture' => Furniture::getProduct($SKU),
-        };
+                $productDelete = call_user_func([$productType, 'getProduct'], $SKU);
   
-        $productDelete->remove();
-      }
+                $productDelete->remove();
+            }
         }
     }
 } catch (\Throwable $t) {

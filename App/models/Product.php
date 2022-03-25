@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Dell
- * Date: 3/24/2022
- * Time: 7:24 PM
- */
-
 namespace App\models;
 
 abstract class Product
@@ -47,6 +40,8 @@ abstract class Product
     abstract public static function getProducts($where = null, $order = null);
 
     abstract public static function getProduct($SKU);
+
+    abstract public function createAttribute($data);
 
     abstract public function remove();
 

@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Dell
- * Date: 3/24/2022
- * Time: 7:25 PM
- */
-
 namespace App\models;
 
 use PDO;
@@ -20,6 +13,11 @@ class Book extends Product
     public static function getProduct($SKU)
     {
         return (new Database("products"))->select("SKU = $SKU")->fetchObject(static::class);
+    }
+
+    public function createAttribute($data)
+    {
+        $this->productAttribute = $data['weight'];
     }
 
     public function remove()
