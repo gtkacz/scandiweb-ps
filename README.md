@@ -75,13 +75,13 @@
     ┃ ┣ 📂css
     ┃ ┃ ┗ 📜main.css
     ┃ ┣ 📂images
-    ┃ ┃ ┣ 📜2015-11-09_scandiweb_logo.png
-    ┃ ┃ ┣ 📜demo.gif
-    ┃ ┃ ┣ 📜edit_black_24dp.svg
-    ┃ ┃ ┣ 📜favico.ico
-    ┃ ┃ ┣ 📜github.png
-    ┃ ┃ ┣ 📜QA.png
-    ┃ ┃ ┗ 📜white logo.png
+    ┃ ┃ ┣ 🖼️2015-11-09_scandiweb_logo.png
+    ┃ ┃ ┣ 🖼️demo.gif
+    ┃ ┃ ┣ 🖼️edit_black_24dp.svg
+    ┃ ┃ ┣ 🖼️favico.ico
+    ┃ ┃ ┣ 🖼️github.png
+    ┃ ┃ ┣ 🖼️QA.png
+    ┃ ┃ ┗ 🖼️white logo.png
     ┃ ┣ 📂js
     ┃ ┃ ┗ 📜main.js
     ┃ ┗ 📂views
@@ -101,10 +101,11 @@
     ┃ ┃ ┣ 📜autoload_real.php
     ┃ ┃ ┣ 📜autoload_static.php
     ┃ ┃ ┣ 📜ClassLoader.php
-    ┃ ┃ ┗ 📜LICENSE
+    ┃ ┃ ┗ 📝LICENSE
     ┃ ┗ 📜autoload.php
-    ┣ 📜.htaccess
-    ┣ 📜composer.json
+    ┣ 📋.htaccess
+    ┣ 📝LICENSE
+    ┣ 📋composer.json
     ┗ 📜index.php
     ```
 
