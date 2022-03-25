@@ -1,5 +1,5 @@
 <?php
-require_once("vendor/autoload.php");
+require_once("../../vendor/autoload.php");
 
 use App\models\Book;
 use App\models\DVD;
@@ -20,7 +20,7 @@ if (isset($_POST["SKU"], $_POST["Name"], $_POST["Price"], $_POST["productType"])
 
     $newProduct->create();
 
-    header('location: index');
+    header('location: ../../index');
     exit;
 }
 ?>

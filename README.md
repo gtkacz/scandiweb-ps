@@ -63,7 +63,7 @@
 <h2 align="center">File structure:</h2>
 
     ```
-    📦*root*
+    📦root
     ┣ 📂app
     ┃ ┗ 📂models
     ┃ ┃ ┣ 📜Book.php

@@ -36,7 +36,7 @@ foreach ($allProducts as $row) {
         <div class="title">
             <h2>Product List</h2>
             <div>
-                <button type="button" class="btn btn-success btn-size" onclick="window.location.href='add-product'">
+                <button type="button" class="btn btn-success btn-size" onclick="window.location.href='resources/views/add-product'">
                     ADD
                 </button>
                 <button type="submit" class="btn btn-danger btn-size" value="delete" name="but_delete"

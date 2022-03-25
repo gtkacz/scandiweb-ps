@@ -1,5 +1,5 @@
 <?php
-require_once("vendor/autoload.php");
+require_once("../../vendor/autoload.php");
 
 use App\models\Book;
 use App\models\DVD;
@@ -28,5 +28,5 @@ try {
     echo $t->getMessage(), " at ", $t->getFile(), ":", $t->getLine(), "\n";
 }
 
-header('location: index');
+header('location: ../../index');
 ?>
