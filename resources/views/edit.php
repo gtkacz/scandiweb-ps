@@ -24,7 +24,7 @@ if (isset($_POST["SKU"], $_POST["Name"], $_POST["Price"], $_POST["productType"])
 
     $editProduct->edit($oldSKU);
 
-    header('location: ../../index');
+    header('location: index');
     exit;
 }
 ?>

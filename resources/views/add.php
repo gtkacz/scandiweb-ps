@@ -20,7 +20,7 @@ if (isset($_POST["SKU"], $_POST["Name"], $_POST["Price"], $_POST["productType"])
 
     $newProduct->create();
 
-    header('location: ../../index');
+    header('location: index');
     exit;
 }
 ?>

@@ -13,7 +13,6 @@ if (isset($_GET["SKU"], $_GET["type"])) {
     $SKU = "'$SKU'";
 
     $product = call_user_func([$className, 'getProduct'], $SKU);
-    print_r($product);
 } else {
     exit;
 }
