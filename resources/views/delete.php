@@ -1,4 +1,5 @@
 <?php
+
 require_once("../../vendor/autoload.php");
 
 use App\models\Book;
@@ -23,4 +24,3 @@ if (isset($_POST['but_delete'])) {
 }
 header('location: index');
 exit;
-?>

@@ -1,4 +1,5 @@
 <?php
+
 namespace App\models;
 
 use PDO;
@@ -9,20 +10,7 @@ class Database
     const HOST = "localhost";
     const USER = "root";
     const PASSWORD = "";
-    const DBNAME = "product_list";
-
-    // const HOST = "sql302.epizy.com";
-    // const USER = "epiz_31256053";
-    // const PASSWORD = "7dD59QGe4nloyJ";
-    // const DBNAME = "epiz_31256053_product_list";
-
-    // $arrJson = file_get_contents("../../resources/setup/database-info.json");
-    // $arrDB = json_decode($JSON, true);
-
-    // const HOST = $arrDB["Host"];
-    // const USER = $arrDB["Username"];
-    // const PASSWORD = $arrDB["Password"];
-    // const DBNAME = $arrDB["Database"];
+    const DB_NAME = "product_list";
 
     private $table;
     private $connection;
@@ -38,7 +26,7 @@ class Database
     private function createConnection()
     {
         try {
-            $this->connection = new PDO('mysql:host=' . self::HOST . ';dbname=' . self::DBNAME, self::USER, self::PASSWORD);
+            $this->connection = new PDO('mysql:host=' . self::HOST . ';dbname=' . self::DB_NAME, self::USER, self::PASSWORD);
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             die("ERROR: " . $e->getMessage());

@@ -1,4 +1,5 @@
 <?php
+
 require_once("../../vendor/autoload.php");
 
 use App\models\Book;
@@ -10,7 +11,7 @@ if (isset($_POST["SKU"], $_POST["Name"], $_POST["Price"], $_POST["productType"])
 
     $className = "App\\models\\$productType";
 
-    $newProduct = new $className;
+    $newProduct = new $className();
 
     $newProduct->SKU = $_POST["SKU"];
     $newProduct->Name = $_POST["Name"];
@@ -22,4 +23,3 @@ if (isset($_POST["SKU"], $_POST["Name"], $_POST["Price"], $_POST["productType"])
 }
 header('location: index');
 exit;
-?>

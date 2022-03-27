@@ -1,4 +1,5 @@
 <?php
+
 require_once("../../vendor/autoload.php");
 
 use App\models\Book;
@@ -35,21 +36,21 @@ include("partials/head.php");
         <center>
             <div class="card-edit">
                 <input type="text" class="fake-input" placeholder="Edit SKU" id="sku" name="SKU"
-                       value="<?php echo $product->SKU ?>" oninvalid="this.setCustomValidity('Please, submit required data')"
+                       value="<?= $product->SKU ?>" oninvalid="this.setCustomValidity('Please, submit required data')"
                 oninput="this.setCustomValidity('')" required><br>
                 <input type="text" class="fake-input" placeholder="Edit name" id="name" name="Name"
-                       value="<?php echo $product->Name ?>" oninvalid="this.setCustomValidity('Please, submit required
+                       value="<?= $product->Name ?>" oninvalid="this.setCustomValidity('Please, submit required
                        data')" oninput="this.setCustomValidity('')" required><br>
                 <input type="text" class="fake-input" placeholder="Edit price" pattern="[0-9]+" min="0"
                        oninput="validity.valid||(value='');" id="price" name="Price"
-                       value=<?php echo $product->Price ?> oninvalid="this.setCustomValidity('Please, submit required
+                       value=<?= $product->Price ?> oninvalid="this.setCustomValidity('Please, submit required
                        data')" oninput="this.setCustomValidity('')" required><br>
                 <input type="hidden" id="productType" name="productType"
-                       value=<?php echo $product->productType ?> required><br>
-                <input type="hidden" id="oldSKU" name="oldSKU" value="<?php echo $product->SKU ?>" required><br>
+                       value=<?= $product->productType ?> required><br>
+                <input type="hidden" id="oldSKU" name="oldSKU" value="<?= $product->SKU ?>" required><br>
                 <input type="text" class="fake-input" placeholder="Edit attribute" id="productAttribute"
                        name="productAttribute"
-                       value=<?php echo $product->productAttribute ?> oninvalid="this.setCustomValidity('Please, submit
+                       value=<?= $product->productAttribute ?> oninvalid="this.setCustomValidity('Please, submit
                        required data')" oninput="this.setCustomValidity('')" required><br>
             </div>
         </center>

@@ -1,4 +1,5 @@
 <?php
+
 namespace App\models;
 
 abstract class Product
