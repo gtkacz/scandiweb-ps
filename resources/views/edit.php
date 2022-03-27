@@ -9,6 +9,8 @@ if (isset($_POST["SKU"], $_POST["Name"], $_POST["Price"], $_POST["productType"])
     $productType = $_POST["productType"];
     $className = "App\\models\\$productType";
 
+    print_r($_POST);
+
     $oldSKU = $_POST["oldSKU"];
     $oldSKU = "'$oldSKU'";
 

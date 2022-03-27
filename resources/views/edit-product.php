@@ -45,7 +45,7 @@ include("partials/head.php");
                        data')" oninput="this.setCustomValidity('')" required><br>
                 <input type="hidden" id="productType" name="productType"
                        value=<?php echo $product->productType ?> required><br>
-                <input type="hidden" id="oldSKU" name="oldSKU" value=<?php echo $product->SKU ?> required><br>
+                <input type="hidden" id="oldSKU" name="oldSKU" value="<?php echo $product->SKU ?>" required><br>
                 <input type="text" class="fake-input" placeholder="Edit attribute" id="productAttribute"
                        name="productAttribute"
                        value=<?php echo $product->productAttribute ?> oninvalid="this.setCustomValidity('Please, submit
