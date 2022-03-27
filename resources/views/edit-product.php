@@ -15,6 +15,7 @@ if (isset($_GET["SKU"], $_GET["type"])) {
 
     $product = call_user_func([$className, 'getProduct'], $SKU);
 } else {
+    header('location: index');
     exit;
 }
 
@@ -37,7 +38,7 @@ include("partials/head.php");
                        value="<?php echo $product->SKU ?>" oninvalid="this.setCustomValidity('Please, submit required data')"
                 oninput="this.setCustomValidity('')" required><br>
                 <input type="text" class="fake-input" placeholder="Edit name" id="name" name="Name"
-                       value=<?php echo $product->Name ?> oninvalid="this.setCustomValidity('Please, submit required
+                       value="<?php echo $product->Name ?>" oninvalid="this.setCustomValidity('Please, submit required
                        data')" oninput="this.setCustomValidity('')" required><br>
                 <input type="text" class="fake-input" placeholder="Edit price" pattern="[0-9]+" min="0"
                        oninput="validity.valid||(value='');" id="price" name="Price"

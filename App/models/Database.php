@@ -6,7 +6,6 @@ use PDOException;
 
 class Database
 {
-
     const HOST = "localhost";
     const USER = "root";
     const PASSWORD = "";

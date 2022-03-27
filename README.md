@@ -37,12 +37,12 @@
             <td>Unique</td>
         </tr>
         <tr>
-            <td>NAME</td>
+            <td>Name</td>
             <td>varchar(65)</td>
             <td>-</td>
         </tr>
         <tr>
-            <td>PRICE</td>
+            <td>Price</td>
             <td>decimal(10,0)</td>
             <td>-</td>
         </tr>
