@@ -20,11 +20,14 @@ include("partials/head.php");
         <hr>
         <div class=preview>
 
-            <div class="card-preview">
-                <span id="skuupdate">SKU</span>
-                <span id="nameupdate">Name</span>
-                <span id="priceupdate">Price</span>
-                <span id="attrupdate">Attribute</span>
+            <div class="div-preview">
+                <span>Live preview:</span>
+                <div class="card-preview">
+                    <span id="skuupdate">SKU</span>
+                    <span id="nameupdate">Name</span>
+                    <span id="priceupdate">Price</span>
+                    <span id="attrupdate">Attribute</span>
+                </div>
             </div>
 
             <div class="form">

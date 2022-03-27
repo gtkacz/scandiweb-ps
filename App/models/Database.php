@@ -18,7 +18,7 @@ class Database
     public function __construct($table = null)
     {
         $this->table = $table;
-        if(!isset($this->connection)){
+        if (!isset($this->connection)) {
             $this->createConnection();
         }
     }
