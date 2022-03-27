@@ -14,8 +14,6 @@ if (isset($_POST["SKU"], $_POST["Name"], $_POST["Price"], $_POST["productType"])
 
     $editProduct = call_user_func([$className, 'getProduct'], $oldSKU);
     
-    // echo '<pre>'; print_r($editProduct); echo '</pre>';
-    echo $oldSKU;
     $editProduct->SKU = $_POST["SKU"];
     $editProduct->Name = $_POST["Name"];
     $editProduct->Price = $_POST["Price"];

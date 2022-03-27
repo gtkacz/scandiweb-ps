@@ -37,6 +37,14 @@ abstract class Product
         return true;
     }
 
+    public function getSlug($attribute)
+    {
+        $slug = $this->$attribute;
+        $slug = preg_replace('/\s+/', '+', $slug);
+
+        return $slug;
+    }
+
     abstract public static function getProducts($where = null, $order = null);
 
     abstract public static function getProduct($SKU);
