@@ -11,10 +11,10 @@ class Database
     const PASSWORD = "";
     const DBNAME = "product_list";
 
-    // const HOST = "sql205.iceiy.com";
-    // const USER = "icei_31280718";
-    // const PASSWORD = "IMVf6TvQhqHy";
-    // const DBNAME = "icei_31280718_product_list";
+    // const HOST = "sql302.epizy.com";
+    // const USER = "epiz_31256053";
+    // const PASSWORD = "7dD59QGe4nloyJ";
+    // const DBNAME = "epiz_31256053_product_list";
 
     // $arrJson = file_get_contents("../../resources/setup/database-info.json");
     // $arrDB = json_decode($JSON, true);
