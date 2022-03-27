@@ -10,6 +10,7 @@ if (isset($_GET["SKU"], $_GET["type"])) {
     $className = "App\\models\\$productType";
 
     $SKU = $_GET["SKU"];
+    $SKU = str_replace('+', ' ', $SKU);
     $SKU = "'$SKU'";
 
     $product = call_user_func([$className, 'getProduct'], $SKU);
@@ -33,7 +34,7 @@ include("partials/head.php");
         <center>
             <div class="card-edit">
                 <input type="text" class="fake-input" placeholder="Edit SKU" id="sku" name="SKU"
-                       value=<?php echo $product->SKU ?> oninvalid="this.setCustomValidity('Please, submit required data')"
+                       value="<?php echo $product->SKU ?>" oninvalid="this.setCustomValidity('Please, submit required data')"
                 oninput="this.setCustomValidity('')" required><br>
                 <input type="text" class="fake-input" placeholder="Edit name" id="name" name="Name"
                        value=<?php echo $product->Name ?> oninvalid="this.setCustomValidity('Please, submit required

@@ -18,7 +18,7 @@ try {
                 $className = "App\\models\\$productType";
 
                 $productDelete = call_user_func([$className, 'getProduct'], $SKU);
-  
+
                 $productDelete->remove();
             }
         }
