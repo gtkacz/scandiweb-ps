@@ -16,6 +16,14 @@ class Database
     // const PASSWORD = "IMVf6TvQhqHy";
     // const DBNAME = "icei_31280718_product_list";
 
+    // $arrJson = file_get_contents("../../resources/setup/database-info.json");
+    // $arrDB = json_decode($JSON, true);
+
+    // const HOST = $arrDB["Host"];
+    // const USER = $arrDB["Username"];
+    // const PASSWORD = $arrDB["Password"];
+    // const DBNAME = $arrDB["Database"];
+
     private $table;
     private $connection;
 

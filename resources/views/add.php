@@ -19,8 +19,7 @@ if (isset($_POST["SKU"], $_POST["Name"], $_POST["Price"], $_POST["productType"])
     $newProduct->createAttribute($_POST);
 
     $newProduct->create();
-
-    header('location: index');
-    exit;
 }
+header('location: index');
+exit;
 ?>

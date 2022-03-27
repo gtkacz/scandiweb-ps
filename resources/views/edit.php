@@ -23,8 +23,7 @@ if (isset($_POST["SKU"], $_POST["Name"], $_POST["Price"], $_POST["productType"])
     $editProduct->productAttribute = $_POST["productAttribute"];
 
     $editProduct->edit($oldSKU);
-
-    header('location: index');
-    exit;
 }
+header('location: index');
+exit;
 ?>

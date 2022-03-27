@@ -9,6 +9,20 @@
 <hr>
 
 <p align="center">
+    <h2 align="center">How to use:</h2>
+    <ol align="center">
+        <li align="center">On  the <i>.htaccess</i> file, replace your deployment directory on <i>RewriteBase</i></li>
+        <ul>
+            <li>For example: if you're deploying at <i>https://localhost/myapp/</i>, <i>RewriteBase</i> must be <i>/myapp/</i></li>
+            <li>Else if you're deploying simply at <i>https://localhost/</i>, <i>RewriteBase</i> must be <i>/</i></li>
+        </ul>
+        <li align="center">On  the <i>/app/models/Database.php</i> file, replace the <i>HOST</i>, <i>USER</i>, <i>PASSWORD</i> and <i>DBNAME</i> constants with your relevant SQL information.</li>
+    </ol>
+</p>
+
+<br>
+
+<p align="center">
     <h2 align="center">Built with:</h2>
     <center>
         <ul align="center">
@@ -21,6 +35,8 @@
         </ul>
     </center>
 </p>
+
+<hr>
 
 <p align="center">
     <h2 align="center">Database structure:</h2>
@@ -107,13 +123,6 @@
     ┣ 📝LICENSE
     ┣ 📑composer.json
     ┗ 📜index.php
-
-<hr>
-
-<p align="center">
-    <h2 align="center">How to use:</h2>
-    <span></span>
-</p>
 
 <hr>
 
