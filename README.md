@@ -20,8 +20,6 @@
     </ol>
 </p>
 
-<br>
-
 <p align="center">
     <h2 align="center">Built with:</h2>
     <center>
@@ -50,7 +48,7 @@
         <tr>
             <td>SKU</td>
             <td>varchar(30)</td>
-            <td>Unique</td>
+            <td>Primary</td>
         </tr>
         <tr>
             <td>Name</td>
@@ -129,9 +127,9 @@
 <center>
     <p align="center">
         <h3 align="center">Demonstration</h3>
-        <img src="resources/images/demo.gif" style="height: 50ch"><br><br>
+            <img src="resources/images/demo.gif" style="height: 50ch"><br><br>
         <h3 align="center">AutoQA approval</h3>
-        <img src="resources/images/QA.png" style="height: 50ch;">
+            <img src="resources/images/QA.png" style="height: 50ch;">
     </p>
 </center>
 

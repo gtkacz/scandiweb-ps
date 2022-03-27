@@ -30,7 +30,7 @@ foreach ($allProducts as $row) {
 ?>
 <body>
 <div class="container">
-    <form method="post" action="resources/views/delete">
+    <form method="post" action="<?=$_SERVER['PHP_SELF']?>">
         <div class="title">
             <h2>Product List</h2>
             <div>
@@ -50,4 +50,23 @@ foreach ($allProducts as $row) {
         </div>
     </form>
 </div>
+<?php
+if (isset($_POST['but_delete'])) {
+    if (isset($_POST['delete'])) {
+        foreach ($_POST['delete'] as $deleteid) {
+            $separate = explode("&", $deleteid);
+            $SKU = $separate[0];
+            $SKU = str_replace('+', ' ', $SKU);
+            $SKU = "'$SKU'";
+            $productType = $separate[1];
+            $className = "App\\models\\$productType";
+
+            $productDelete = call_user_func([$className, 'getProduct'], $SKU);
+
+            $productDelete->remove();
+        }
+    header("Refresh:0");
+    }
+}
+?>
 <?php include("resources/views/partials/footer.php"); ?>
